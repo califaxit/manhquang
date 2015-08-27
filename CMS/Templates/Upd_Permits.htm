@@ -1,0 +1,124 @@
+﻿
+<script src="/JS/ForEachPage/Process_Permits.js"></script>
+<script src="/JS/FRAMEWORK/BussinessLogic/PermitsBO.js"></script>
+<div class="fluid">
+    <div class="widget">
+        <div class="whead">
+            <h6>Sua Permits</h6>
+            <div class="clear"></div>
+        </div>
+        <!--Form-->
+        <form id="frmUpd_Permits" enctype="multipart/form-data" method="" action="ssss">
+            <input type="hidden" id="txtCode" name="txtCode" />
+            <div class="formRow">
+                <div class="grid8">
+                    <!--ID-->
+                    <input type="hidden" id="txtID" name="txtID" value="{$T.data.ID}" />
+                    <!--IsAdmin Name-->
+                    <div class="formRow">
+                        <div class="grid2">IsAdmin</div>
+                        <div class="grid4">
+                            <select id="cbbIsAdmin" name="cbbIsAdmin">
+                                <option value="true" {#if $T.data.IsAdmin == true} selected="selected" {#/if}}>True</option>
+                                <option value="false" {#if $T.data.IsAdmin == false} selected="selected" {#/if}>False</option>
+                            </select>
+                        </div>
+                        <div class="grid2">Name</div>
+                        <div class="grid4">
+                            <input type="text" id="txtName" name="txtName" value="{$T.data.Name}" />
+                        </div>
+
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--IsContent IsPartner-->
+                    <div class="formRow">
+                        <div class="grid2">IsContent</div>
+                        <div class="grid4">
+                            <select id="cbbIsContent" name="cbbIsContent">
+                                <option value="true" {#if $T.data.IsContent== true} selected="selected"{#/if}>True</option>
+                                <option value="false" {#if $T.data.IsContent== false} selected="selected" {#/if}>False</option>
+                            </select>
+                        </div>
+                        <div class="grid2">IsPartner</div>
+                        <div class="grid4">
+                            <select id="cbbIsPartner" name="cbbIsPartner">
+                                <option value="true" {#if $T.data.IsPartner== true} selected="selected" {#/if}>True</option>
+                                <option value="false" {#if $T.data.IsPartner== false} selected="selected" {#/if}>False</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Type SystemKey-->
+                    <div class="formRow">
+                        <div class="grid2">Type</div>
+                        <div class="grid4">
+                            <select id="cbbType" name="cbbType">
+                                <option value="0" {#if $T.data.Type == 0} selected="selected" {#/if}>0</option>
+                                <option value="1" {#if $T.data.Type == 1} selected="selected" {#/if}>1</option>
+                                <option value="2" {#if $T.data.Type == 2} selected="selected" {#/if}>2</option>
+                                <option value="3" {#if $T.data.Type == 3} selected="selected" {#/if}>3</option>
+                                <option value="4" {#if $T.data.Type == 4} selected="selected" {#/if}>4</option>
+                            </select>
+                        </div>
+                        <div class="grid2">SystemKey</div>
+                        <div class="grid4">
+                            <input type="text" id="txtSystemKey" name="txtSystemKey" value="{$T.data.SystemKey}" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Status Disable-->
+                    <div class="formRowLast">
+                        <div class="grid2">
+                            Status
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbStatus" name="cbbStatus">
+                                <option value="0" {#if $T.data.Status == 0} selected="selected" {#/if}>0</option>
+                                <option value="1" {#if $T.data.Status == 1} selected="selected" {#/if}>1</option>
+                                <option value="2" {#if $T.data.Status == 2} selected="selected" {#/if}>2</option>
+                                <option value="3" {#if $T.data.Status == 3} selected="selected" {#/if}>3</option>
+                                <option value="4" {#if $T.data.Status == 4} selected="selected" {#/if}>4</option>
+                            </select>
+                        </div>
+                        <div class="grid2">
+                            Disable
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbDisable" name="cbbDisable">
+                                <option value="true"  {#if $T.data.Disable == true} selected="selected" {#/if}>True</option>
+                                <option value="false" {#if $T.data.Disable == false} selected="selected" {#/if}>False</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </form>
+    </div>
+    <div class="clear"></div>
+
+
+    <!--save button-->
+    <div class="formRow">
+        <div class="grid9">
+            <div id="progress2">
+                <span class="pbar"></span><span class="percent"></span><span class="elapsed"></span>
+            </div>
+        </div>
+        <div class="grid3">
+            <a class="buttonM bRed" onclick="PermitsBO.Upd_ByID();">
+                <span class="icon-checkmark-3"></span>
+                <span>{sys_GetText(239,'Save')}</span>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

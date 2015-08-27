@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="DatabaseDA">
+    <EntitySetMapping Name="Configs">
+      <EntityTypeMapping TypeName="Model.Configs">
+        <MappingFragment StoreEntitySet="Configs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AccessKey" ColumnName="AccessKey" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="Model.Languages">
+        <MappingFragment StoreEntitySet="Languages">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameLang" ColumnName="NameLang" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitDetails">
+      <EntityTypeMapping TypeName="Model.PermitDetails">
+        <MappingFragment StoreEntitySet="PermitDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPermit" ColumnName="IDPermit" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PageURL" ColumnName="PageURL" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits">
+      <EntityTypeMapping TypeName="Model.Permits">
+        <MappingFragment StoreEntitySet="Permits">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsContent" ColumnName="IsContent" />
+          <ScalarProperty Name="IsPartner" ColumnName="IsPartner" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="SystemKey" ColumnName="SystemKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits_SystemUsers">
+      <EntityTypeMapping TypeName="Model.Permits_SystemUsers">
+        <MappingFragment StoreEntitySet="Permits_SystemUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPermit" ColumnName="IDPermit" />
+          <ScalarProperty Name="IDSystemUser" ColumnName="IDSystemUser" />
+          <ScalarProperty Name="IsView" ColumnName="IsView" />
+          <ScalarProperty Name="IsUpdate" ColumnName="IsUpdate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="IsInsert" ColumnName="IsInsert" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Logs" ColumnName="Logs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers">
+      <EntityTypeMapping TypeName="Model.SystemUsers">
+        <MappingFragment StoreEntitySet="SystemUsers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Identifier1" ColumnName="Identifier1" />
+          <ScalarProperty Name="Identifier2" ColumnName="Identifier2" />
+          <ScalarProperty Name="Identifier3" ColumnName="Identifier3" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="IDRefMailSystem" ColumnName="IDRefMailSystem" />
+          <ScalarProperty Name="IDRefAnotherSystem" ColumnName="IDRefAnotherSystem" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Identifier1CreatedDate" ColumnName="Identifier1CreatedDate" />
+          <ScalarProperty Name="Identifier2CreatedDate" ColumnName="Identifier2CreatedDate" />
+          <ScalarProperty Name="Identifier3CreatedDate" ColumnName="Identifier3CreatedDate" />
+          <ScalarProperty Name="PlaceOfIssue1" ColumnName="PlaceOfIssue1" />
+          <ScalarProperty Name="PlaceOfIssue2" ColumnName="PlaceOfIssue2" />
+          <ScalarProperty Name="PlaceOfIssue3" ColumnName="PlaceOfIssue3" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryLevel1">
+      <EntityTypeMapping TypeName="Model.CategoryLevel1">
+        <MappingFragment StoreEntitySet="CategoryLevel1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryNameLevel1" ColumnName="CategoryNameLevel1" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="IDAlbum" ColumnName="IDAlbum" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryLevel1_CategoryLevel2">
+      <EntityTypeMapping TypeName="Model.CategoryLevel1_CategoryLevel2">
+        <MappingFragment StoreEntitySet="CategoryLevel1_CategoryLevel2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeCategoryLevel1" ColumnName="CodeCategoryLevel1" />
+          <ScalarProperty Name="CodeCategoryLevel2" ColumnName="CodeCategoryLevel2" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryLevel2">
+      <EntityTypeMapping TypeName="Model.CategoryLevel2">
+        <MappingFragment StoreEntitySet="CategoryLevel2">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryNameLevel2" ColumnName="CategoryNameLevel2" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="IDAlbum" ColumnName="IDAlbum" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents">
+      <EntityTypeMapping TypeName="Model.Contents">
+        <MappingFragment StoreEntitySet="Contents">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateEdited" ColumnName="DateEdited" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="IDAlbum" ColumnName="IDAlbum" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ExtendProperties1" ColumnName="ExtendProperties1" />
+          <ScalarProperty Name="ExtendProperties2" ColumnName="ExtendProperties2" />
+          <ScalarProperty Name="ExtendProperties3" ColumnName="ExtendProperties3" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Vote" ColumnName="Vote" />
+          <ScalarProperty Name="CommentCount" ColumnName="CommentCount" />
+          <ScalarProperty Name="LikeCount" ColumnName="LikeCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contents_CategoryLevel1">
+      <EntityTypeMapping TypeName="Model.Contents_CategoryLevel1">
+        <MappingFragment StoreEntitySet="Contents_CategoryLevel1">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeContents" ColumnName="CodeContents" />
+          <ScalarProperty Name="CodeCategoryLevel1" ColumnName="CodeCategoryLevel1" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtendProperties">
+      <EntityTypeMapping TypeName="Model.ExtendProperties">
+        <MappingFragment StoreEntitySet="ExtendProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDObject" ColumnName="IDObject" />
+          <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CodeObject" ColumnName="CodeObject" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="Model.Albums">
+        <MappingFragment StoreEntitySet="Albums">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreateByIDUser" ColumnName="CreateByIDUser" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="Model.Files">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CodeAlbums" ColumnName="CodeAlbums" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="CreateByIDUser" ColumnName="CreateByIDUser" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="DownloadCount" ColumnName="DownloadCount" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_CategoryLevel1ViewAll">
+      <EntityTypeMapping TypeName="Model.vw_CategoryLevel1ViewAll">
+        <MappingFragment StoreEntitySet="vw_CategoryLevel1ViewAll">
+          <ScalarProperty Name="CategoryLevel1_ID" ColumnName="CategoryLevel1_ID" />
+          <ScalarProperty Name="CategoryLevel1_CategoryNameLevel1" ColumnName="CategoryLevel1_CategoryNameLevel1" />
+          <ScalarProperty Name="CategoryLevel1_Status" ColumnName="CategoryLevel1_Status" />
+          <ScalarProperty Name="CategoryLevel1_Disable" ColumnName="CategoryLevel1_Disable" />
+          <ScalarProperty Name="CategoryLevel1_Code" ColumnName="CategoryLevel1_Code" />
+          <ScalarProperty Name="CategoryLevel1_Type" ColumnName="CategoryLevel1_Type" />
+          <ScalarProperty Name="CategoryLevel1_Image" ColumnName="CategoryLevel1_Image" />
+          <ScalarProperty Name="CategoryLevel1_Info" ColumnName="CategoryLevel1_Info" />
+          <ScalarProperty Name="CategoryLevel1_ViewCount" ColumnName="CategoryLevel1_ViewCount" />
+          <ScalarProperty Name="CategoryLevel1_CategoryLevel2_Status" ColumnName="CategoryLevel1_CategoryLevel2_Status" />
+          <ScalarProperty Name="CategoryLevel1_CategoryLevel2_Type" ColumnName="CategoryLevel1_CategoryLevel2_Type" />
+          <ScalarProperty Name="CategoryLevel1_CategoryLevel2_Disable" ColumnName="CategoryLevel1_CategoryLevel2_Disable" />
+          <ScalarProperty Name="CategoryLevel1_CategoryLevel2_ID" ColumnName="CategoryLevel1_CategoryLevel2_ID" />
+          <ScalarProperty Name="CategoryLevel2_ID" ColumnName="CategoryLevel2_ID" />
+          <ScalarProperty Name="CategoryLevel2_CategoryNameLevel2" ColumnName="CategoryLevel2_CategoryNameLevel2" />
+          <ScalarProperty Name="CategoryLevel2_Status" ColumnName="CategoryLevel2_Status" />
+          <ScalarProperty Name="CategoryLevel2_Disable" ColumnName="CategoryLevel2_Disable" />
+          <ScalarProperty Name="CategoryLevel2_Code" ColumnName="CategoryLevel2_Code" />
+          <ScalarProperty Name="CategoryLevel1_CategoryLevel2_IDLang" ColumnName="CategoryLevel1_CategoryLevel2_IDLang" />
+          <ScalarProperty Name="CountContent" ColumnName="CountContent" />
+          <ScalarProperty Name="CountContentEnable" ColumnName="CountContentEnable" />
+          <ScalarProperty Name="CountContentDisable" ColumnName="CountContentDisable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_CategoryLevel2ViewAll">
+      <EntityTypeMapping TypeName="Model.vw_CategoryLevel2ViewAll">
+        <MappingFragment StoreEntitySet="vw_CategoryLevel2ViewAll">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryNameLevel2" ColumnName="CategoryNameLevel2" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Disable" ColumnName="Disable" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Image1" ColumnName="Image1" />
+          <ScalarProperty Name="Image2" ColumnName="Image2" />
+          <ScalarProperty Name="Image3" ColumnName="Image3" />
+          <ScalarProperty Name="Tag" ColumnName="Tag" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+          <ScalarProperty Name="Intro" ColumnName="Intro" />
+          <ScalarProperty Name="IDAlbum" ColumnName="IDAlbum" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="CountCategoryLeve1Disable" ColumnName="CountCategoryLeve1Disable" />
+          <ScalarProperty Name="CountCategoryLeve1Enable" ColumnName="CountCategoryLeve1Enable" />
+          <ScalarProperty Name="CountCategoryLeve1" ColumnName="CountCategoryLeve1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_ContentsViewAll">
+      <EntityTypeMapping TypeName="Model.vw_ContentsViewAll">
+        <MappingFragment StoreEntitySet="vw_ContentsViewAll">
+          <ScalarProperty Name="Contents_UpdateBy" ColumnName="Contents_UpdateBy" />
+          <ScalarProperty Name="Contents_Type" ColumnName="Contents_Type" />
+          <ScalarProperty Name="Contents_PublishDate" ColumnName="Contents_PublishDate" />
+          <ScalarProperty Name="Contents_Title" ColumnName="Contents_Title" />
+          <ScalarProperty Name="Contents_ExpireDate" ColumnName="Contents_ExpireDate" />
+          <ScalarProperty Name="Contents_Info" ColumnName="Contents_Info" />
+          <ScalarProperty Name="Contents_Image" ColumnName="Contents_Image" />
+          <ScalarProperty Name="Contents_Status" ColumnName="Contents_Status" />
+          <ScalarProperty Name="Contents_CreatedBy" ColumnName="Contents_CreatedBy" />
+          <ScalarProperty Name="Contents_Disable" ColumnName="Contents_Disable" />
+          <ScalarProperty Name="Contents_DateCreated" ColumnName="Contents_DateCreated" />
+          <ScalarProperty Name="Contents_DateEdited" ColumnName="Contents_DateEdited" />
+          <ScalarProperty Name="Contents_ViewCount" ColumnName="Contents_ViewCount" />
+          <ScalarProperty Name="Contents_Code" ColumnName="Contents_Code" />
+          <ScalarProperty Name="Contents_CategoryLevel1_Status" ColumnName="Contents_CategoryLevel1_Status" />
+          <ScalarProperty Name="Contents_CategoryLevel1_Type" ColumnName="Contents_CategoryLevel1_Type" />
+          <ScalarProperty Name="Contents_CategoryLevel1_Disable" ColumnName="Contents_CategoryLevel1_Disable" />
+          <ScalarProperty Name="CategoryLevel1_CategoryNameLevel1" ColumnName="CategoryLevel1_CategoryNameLevel1" />
+          <ScalarProperty Name="CategoryLevel1_Status" ColumnName="CategoryLevel1_Status" />
+          <ScalarProperty Name="CategoryLevel1_Disable" ColumnName="CategoryLevel1_Disable" />
+          <ScalarProperty Name="CategoryLevel1_Code" ColumnName="CategoryLevel1_Code" />
+          <ScalarProperty Name="CategoryLevel1_Type" ColumnName="CategoryLevel1_Type" />
+          <ScalarProperty Name="CategoryLevel1_ViewCount" ColumnName="CategoryLevel1_ViewCount" />
+          <ScalarProperty Name="Contents_CategoryLevel1_IDLang" ColumnName="Contents_CategoryLevel1_IDLang" />
+          <ScalarProperty Name="Contents_Vote" ColumnName="Contents_Vote" />
+          <ScalarProperty Name="Contents_CommentCount" ColumnName="Contents_CommentCount" />
+          <ScalarProperty Name="Contents_LikeCount" ColumnName="Contents_LikeCount" />
+          <ScalarProperty Name="Contents_Intro" ColumnName="Contents_Intro" />
+          <ScalarProperty Name="CategoryLevel1_ID" ColumnName="CategoryLevel1_ID" />
+          <ScalarProperty Name="Contents_ID" ColumnName="Contents_ID" />
+          <ScalarProperty Name="Content_CategoryLevel1_ID" ColumnName="Content_CategoryLevel1_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_FilesViewAll">
+      <EntityTypeMapping TypeName="Model.vw_FilesViewAll">
+        <MappingFragment StoreEntitySet="vw_FilesViewAll">
+          <ScalarProperty Name="Albums_ID" ColumnName="Albums_ID" />
+          <ScalarProperty Name="Albums_Title" ColumnName="Albums_Title" />
+          <ScalarProperty Name="Albums_Status" ColumnName="Albums_Status" />
+          <ScalarProperty Name="Albums_Disable" ColumnName="Albums_Disable" />
+          <ScalarProperty Name="Albums_Image" ColumnName="Albums_Image" />
+          <ScalarProperty Name="Albums_Type" ColumnName="Albums_Type" />
+          <ScalarProperty Name="Files_ID" ColumnName="Files_ID" />
+          <ScalarProperty Name="Files_Image" ColumnName="Files_Image" />
+          <ScalarProperty Name="Files_UploadDate" ColumnName="Files_UploadDate" />
+          <ScalarProperty Name="Files_CreateByIDUser" ColumnName="Files_CreateByIDUser" />
+          <ScalarProperty Name="Files_Status" ColumnName="Files_Status" />
+          <ScalarProperty Name="Files_Type" ColumnName="Files_Type" />
+          <ScalarProperty Name="Files_Disable" ColumnName="Files_Disable" />
+          <ScalarProperty Name="Files_IDLang" ColumnName="Files_IDLang" />
+          <ScalarProperty Name="Files_Code" ColumnName="Files_Code" />
+          <ScalarProperty Name="Files_ViewCount" ColumnName="Files_ViewCount" />
+          <ScalarProperty Name="Files_DownloadCount" ColumnName="Files_DownloadCount" />
+          <ScalarProperty Name="Files_Title" ColumnName="Files_Title" />
+          <ScalarProperty Name="Files_Intro" ColumnName="Files_Intro" />
+          <ScalarProperty Name="Albums_Code" ColumnName="Albums_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_PermitsViewAll">
+      <EntityTypeMapping TypeName="Model.vw_PermitsViewAll">
+        <MappingFragment StoreEntitySet="vw_PermitsViewAll">
+          <ScalarProperty Name="SystemUsers_ID" ColumnName="SystemUsers_ID" />
+          <ScalarProperty Name="SystemUsers_Username" ColumnName="SystemUsers_Username" />
+          <ScalarProperty Name="SystemUsers_UserGroup" ColumnName="SystemUsers_UserGroup" />
+          <ScalarProperty Name="SystemUsers_Status" ColumnName="SystemUsers_Status" />
+          <ScalarProperty Name="SystemUsers_Email" ColumnName="SystemUsers_Email" />
+          <ScalarProperty Name="SystemUsers_Type" ColumnName="SystemUsers_Type" />
+          <ScalarProperty Name="SystemUsers_Disable" ColumnName="SystemUsers_Disable" />
+          <ScalarProperty Name="Permits_SystemUsers_IsView" ColumnName="Permits_SystemUsers_IsView" />
+          <ScalarProperty Name="Permits_SystemUsers_IsUpdate" ColumnName="Permits_SystemUsers_IsUpdate" />
+          <ScalarProperty Name="Permits_SystemUsers_IsDelete" ColumnName="Permits_SystemUsers_IsDelete" />
+          <ScalarProperty Name="Permits_SystemUsers_IsInsert" ColumnName="Permits_SystemUsers_IsInsert" />
+          <ScalarProperty Name="Permits_SystemUsers_IsSpecial" ColumnName="Permits_SystemUsers_IsSpecial" />
+          <ScalarProperty Name="Permits_SystemUsers_Description" ColumnName="Permits_SystemUsers_Description" />
+          <ScalarProperty Name="Permits_SystemUsers_Status" ColumnName="Permits_SystemUsers_Status" />
+          <ScalarProperty Name="Permits_SystemUsers_Disable" ColumnName="Permits_SystemUsers_Disable" />
+          <ScalarProperty Name="Permits_SystemUsers_Type" ColumnName="Permits_SystemUsers_Type" />
+          <ScalarProperty Name="Permits_ID" ColumnName="Permits_ID" />
+          <ScalarProperty Name="Permits_IsContent" ColumnName="Permits_IsContent" />
+          <ScalarProperty Name="Permits_IsPartner" ColumnName="Permits_IsPartner" />
+          <ScalarProperty Name="Permits_SystemKey" ColumnName="Permits_SystemKey" />
+          <ScalarProperty Name="Permits_Disable" ColumnName="Permits_Disable" />
+          <ScalarProperty Name="Permits_Type" ColumnName="Permits_Type" />
+          <ScalarProperty Name="Permits_Status" ColumnName="Permits_Status" />
+          <ScalarProperty Name="Permits_Name" ColumnName="Permits_Name" />
+          <ScalarProperty Name="PermitDetails_Name" ColumnName="PermitDetails_Name" />
+          <ScalarProperty Name="PermitDetails_PageURL" ColumnName="PermitDetails_PageURL" />
+          <ScalarProperty Name="PermitDetails_Status" ColumnName="PermitDetails_Status" />
+          <ScalarProperty Name="PermitDetails_ID" ColumnName="PermitDetails_ID" />
+          <ScalarProperty Name="PermitDetails_Type" ColumnName="PermitDetails_Type" />
+          <ScalarProperty Name="PermitDetails_Disable" ColumnName="PermitDetails_Disable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Model.Store.SplitStringToTable" FunctionImportName="SplitStringToTable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.SplitStringToTable_Result">
+          <ScalarProperty Name="data" ColumnName="data" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllInfoLogin_ByEmail" FunctionName="Model.Store.GetAllInfoLogin_ByEmail" />
+    <FunctionImportMapping FunctionImportName="GetAllInfoLogin_ByIDUsers" FunctionName="Model.Store.GetAllInfoLogin_ByIDUsers" />
+    <FunctionImportMapping FunctionImportName="GetAllInfoLogin_ByUserName" FunctionName="Model.Store.GetAllInfoLogin_ByUserName" />
+  </EntityContainerMapping>
+</Mapping>

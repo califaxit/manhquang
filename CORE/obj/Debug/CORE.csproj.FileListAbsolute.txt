@@ -1,0 +1,16 @@
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\CORE.dll.config
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\CORE.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\CORE.pdb
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\BussinessLogic.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\DataAccesss.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\Library.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\Newtonsoft.Json.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\EntityFramework.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\BussinessLogic.pdb
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\DataAccesss.pdb
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\Entities.pdb
+D:\Data\WORK\Picker\Picker-Lotus\CORE\bin\Debug\Library.pdb
+D:\Data\WORK\Picker\Picker-Lotus\CORE\obj\Debug\CORE.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\Picker-Lotus\CORE\obj\Debug\CORE.dll
+D:\Data\WORK\Picker\Picker-Lotus\CORE\obj\Debug\CORE.pdb

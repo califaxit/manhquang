@@ -1,0 +1,17 @@
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\ActionHandler.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\ActionHandler.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\BussinessLogic.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\CORE.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\DataAccesss.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\EntityFramework.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\Library.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\Newtonsoft.Json.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\BussinessLogic.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\CORE.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\DataAccesss.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\Entities.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\bin\Debug\Library.pdb
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\obj\Debug\ActionHandler.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\obj\Debug\ActionHandler.dll
+D:\Data\WORK\Picker\Picker-Lotus\ActionHandler\obj\Debug\ActionHandler.pdb

@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Configs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccessKey" Type="nvarchar" MaxLength="250" />
+    <Property Name="Value" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Group" Type="int" />
+    <Property Name="Note" Type="nvarchar" MaxLength="250" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="Disable" Type="bit" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameLang" Type="nvarchar(max)" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Directory" Type="nvarchar(max)" />
+    <Property Name="Filename" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Disable" Type="bit" />
+  </EntityType>
+  <EntityType Name="PermitDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPermit" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="PageURL" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+  </EntityType>
+  <EntityType Name="Permits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IsContent" Type="bit" />
+    <Property Name="IsPartner" Type="bit" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="SystemKey" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Permits_SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPermit" Type="int" Nullable="false" />
+    <Property Name="IDSystemUser" Type="int" Nullable="false" />
+    <Property Name="IsView" Type="bit" />
+    <Property Name="IsUpdate" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="IsSpecial" Type="bit" />
+    <Property Name="IsInsert" Type="bit" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Logs" Type="nvarchar" MaxLength="250" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+  </EntityType>
+  <EntityType Name="SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserGroup" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="Identifier1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Identifier2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Identifier3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="image" />
+    <Property Name="Gender" Type="int" />
+    <Property Name="IDRefMailSystem" Type="int" />
+    <Property Name="IDRefAnotherSystem" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Identifier1CreatedDate" Type="date" />
+    <Property Name="Identifier2CreatedDate" Type="date" />
+    <Property Name="Identifier3CreatedDate" Type="date" />
+    <Property Name="PlaceOfIssue1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaceOfIssue2" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaceOfIssue3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CategoryLevel1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryNameLevel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDLang" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Note" Type="ntext" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tag" Type="nvarchar(max)" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="Intro" Type="nvarchar(max)" />
+    <Property Name="IDAlbum" Type="int" />
+    <Property Name="ViewCount" Type="bigint" />
+  </EntityType>
+  <EntityType Name="CategoryLevel1_CategoryLevel2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeCategoryLevel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodeCategoryLevel2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="IDLang" Type="int" />
+  </EntityType>
+  <EntityType Name="CategoryLevel2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryNameLevel2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Note" Type="ntext" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tag" Type="nvarchar(max)" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="Intro" Type="nvarchar(max)" />
+    <Property Name="IDAlbum" Type="int" />
+    <Property Name="ViewCount" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Title" Type="nvarchar(max)" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="Intro" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Tag" Type="nvarchar(max)" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="DateEdited" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="ExpireDate" Type="datetime" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="IDAlbum" Type="int" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExtendProperties1" Type="ntext" />
+    <Property Name="ExtendProperties2" Type="ntext" />
+    <Property Name="ExtendProperties3" Type="ntext" />
+    <Property Name="ViewCount" Type="bigint" />
+    <Property Name="Data" Type="varbinary(max)" />
+    <Property Name="Vote" Type="bigint" />
+    <Property Name="CommentCount" Type="bigint" />
+    <Property Name="LikeCount" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Contents_CategoryLevel1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeContents" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodeCategoryLevel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="IDLang" Type="int" />
+  </EntityType>
+  <EntityType Name="ExtendProperties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Value" Type="nvarchar(max)" />
+    <Property Name="ValueType" Type="int" />
+    <Property Name="Image" Type="ntext" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDObject" Type="int" />
+    <Property Name="ObjectType" Type="int" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Group" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="CodeObject" Type="int" />
+    <Property Name="Disable" Type="bit" />
+  </EntityType>
+  <EntityType Name="Albums">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Info" Type="ntext" />
+    <Property Name="Intro" Type="ntext" Nullable="false" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateByIDUser" Type="bigint" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Type" Type="int" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="ViewCount" Type="bigint" />
+    <Property Name="DownloadCount" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeAlbums" Type="nvarchar" MaxLength="50" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Info" Type="ntext" />
+    <Property Name="UploadDate" Type="datetime" />
+    <Property Name="CreateByIDUser" Type="bigint" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Width" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="ViewCount" Type="bigint" />
+    <Property Name="DownloadCount" Type="bigint" />
+    <Property Name="Intro" Type="ntext" />
+    <Property Name="Title" Type="ntext" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RM_Daotaocongnghe_com_v2.0.dbo.vw_CategoryLevel1ViewAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_CategoryLevel1ViewAll">
+    <Key>
+      <PropertyRef Name="CategoryLevel1_ID" />
+      <PropertyRef Name="CountContent" />
+      <PropertyRef Name="CountContentEnable" />
+      <PropertyRef Name="CountContentDisable" />
+    </Key>
+    <Property Name="CategoryLevel1_ID" Type="int" Nullable="false" />
+    <Property Name="CategoryLevel1_CategoryNameLevel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel1_Status" Type="int" />
+    <Property Name="CategoryLevel1_Disable" Type="bit" />
+    <Property Name="CategoryLevel1_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel1_Type" Type="int" />
+    <Property Name="CategoryLevel1_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="CategoryLevel1_Info" Type="nvarchar(max)" />
+    <Property Name="CategoryLevel1_ViewCount" Type="bigint" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Status" Type="int" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Type" Type="int" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Disable" Type="bit" />
+    <Property Name="CategoryLevel1_CategoryLevel2_ID" Type="int" />
+    <Property Name="CategoryLevel2_ID" Type="int" />
+    <Property Name="CategoryLevel2_CategoryNameLevel2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel2_Status" Type="int" />
+    <Property Name="CategoryLevel2_Disable" Type="bit" />
+    <Property Name="CategoryLevel2_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel1_CategoryLevel2_IDLang" Type="int" />
+    <Property Name="CountContent" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="CountContentEnable" Type="varchar" MaxLength="66" Nullable="false" />
+    <Property Name="CountContentDisable" Type="varchar" MaxLength="67" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RM_Daotaocongnghe_com_v2.0.dbo.vw_CategoryLevel2ViewAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_CategoryLevel2ViewAll">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryNameLevel2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Disable" Type="bit" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDLang" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Note" Type="ntext" />
+    <Property Name="Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Image3" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tag" Type="nvarchar(max)" />
+    <Property Name="Info" Type="nvarchar(max)" />
+    <Property Name="Intro" Type="nvarchar(max)" />
+    <Property Name="IDAlbum" Type="int" />
+    <Property Name="ViewCount" Type="bigint" />
+    <Property Name="CountCategoryLeve1Disable" Type="int" />
+    <Property Name="CountCategoryLeve1Enable" Type="int" />
+    <Property Name="CountCategoryLeve1" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RM_Daotaocongnghe_com_v2.0.dbo.vw_ContentsViewAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_ContentsViewAll">
+    <Key>
+      <PropertyRef Name="Contents_ID" />
+    </Key>
+    <Property Name="Contents_UpdateBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contents_Type" Type="int" />
+    <Property Name="Contents_PublishDate" Type="datetime" />
+    <Property Name="Contents_Title" Type="nvarchar(max)" />
+    <Property Name="Contents_ExpireDate" Type="datetime" />
+    <Property Name="Contents_Info" Type="nvarchar(max)" />
+    <Property Name="Contents_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Contents_Status" Type="int" />
+    <Property Name="Contents_CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contents_Disable" Type="bit" />
+    <Property Name="Contents_DateCreated" Type="datetime" />
+    <Property Name="Contents_DateEdited" Type="datetime" />
+    <Property Name="Contents_ViewCount" Type="bigint" />
+    <Property Name="Contents_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Contents_CategoryLevel1_Status" Type="int" />
+    <Property Name="Contents_CategoryLevel1_Type" Type="int" />
+    <Property Name="Contents_CategoryLevel1_Disable" Type="bit" />
+    <Property Name="CategoryLevel1_CategoryNameLevel1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel1_Status" Type="int" />
+    <Property Name="CategoryLevel1_Disable" Type="bit" />
+    <Property Name="CategoryLevel1_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="CategoryLevel1_Type" Type="int" />
+    <Property Name="CategoryLevel1_ViewCount" Type="bigint" />
+    <Property Name="Contents_CategoryLevel1_IDLang" Type="int" />
+    <Property Name="Contents_Vote" Type="bigint" />
+    <Property Name="Contents_CommentCount" Type="bigint" />
+    <Property Name="Contents_LikeCount" Type="bigint" />
+    <Property Name="Contents_Intro" Type="nvarchar(max)" />
+    <Property Name="CategoryLevel1_ID" Type="int" />
+    <Property Name="Contents_ID" Type="int" Nullable="false" />
+    <Property Name="Content_CategoryLevel1_ID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RM_Daotaocongnghe_com_v2.0.dbo.vw_FilesViewAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_FilesViewAll">
+    <Key>
+      <PropertyRef Name="Albums_ID" />
+      <PropertyRef Name="Files_ID" />
+    </Key>
+    <Property Name="Albums_ID" Type="int" Nullable="false" />
+    <Property Name="Albums_Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Albums_Status" Type="int" />
+    <Property Name="Albums_Disable" Type="bit" />
+    <Property Name="Albums_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Albums_Type" Type="int" />
+    <Property Name="Files_ID" Type="int" Nullable="false" />
+    <Property Name="Files_Image" Type="nvarchar" MaxLength="200" />
+    <Property Name="Files_UploadDate" Type="datetime" />
+    <Property Name="Files_CreateByIDUser" Type="bigint" />
+    <Property Name="Files_Status" Type="int" />
+    <Property Name="Files_Type" Type="int" />
+    <Property Name="Files_Disable" Type="bit" />
+    <Property Name="Files_IDLang" Type="int" />
+    <Property Name="Files_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="Files_ViewCount" Type="bigint" />
+    <Property Name="Files_DownloadCount" Type="bigint" />
+    <Property Name="Files_Title" Type="ntext" />
+    <Property Name="Files_Intro" Type="ntext" />
+    <Property Name="Albums_Code" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'RM_Daotaocongnghe_com_v2.0.dbo.vw_PermitsViewAll' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_PermitsViewAll">
+    <Key>
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="Permits_ID" />
+      <PropertyRef Name="Permits_Name" />
+      <PropertyRef Name="PermitDetails_ID" />
+    </Key>
+    <Property Name="SystemUsers_ID" Type="int" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="SystemUsers_UserGroup" Type="int" />
+    <Property Name="SystemUsers_Status" Type="int" />
+    <Property Name="SystemUsers_Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="SystemUsers_Type" Type="int" />
+    <Property Name="SystemUsers_Disable" Type="bit" />
+    <Property Name="Permits_SystemUsers_IsView" Type="bit" />
+    <Property Name="Permits_SystemUsers_IsUpdate" Type="bit" />
+    <Property Name="Permits_SystemUsers_IsDelete" Type="bit" />
+    <Property Name="Permits_SystemUsers_IsInsert" Type="bit" />
+    <Property Name="Permits_SystemUsers_IsSpecial" Type="bit" />
+    <Property Name="Permits_SystemUsers_Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="Permits_SystemUsers_Status" Type="int" />
+    <Property Name="Permits_SystemUsers_Disable" Type="bit" />
+    <Property Name="Permits_SystemUsers_Type" Type="int" />
+    <Property Name="Permits_ID" Type="int" Nullable="false" />
+    <Property Name="Permits_IsContent" Type="bit" />
+    <Property Name="Permits_IsPartner" Type="bit" />
+    <Property Name="Permits_SystemKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="Permits_Disable" Type="bit" />
+    <Property Name="Permits_Type" Type="int" />
+    <Property Name="Permits_Status" Type="int" />
+    <Property Name="Permits_Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="PermitDetails_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="PermitDetails_PageURL" Type="nvarchar" MaxLength="4000" />
+    <Property Name="PermitDetails_Status" Type="int" />
+    <Property Name="PermitDetails_ID" Type="int" Nullable="false" />
+    <Property Name="PermitDetails_Type" Type="int" />
+    <Property Name="PermitDetails_Disable" Type="bit" />
+  </EntityType>
+  <Association Name="FK_PermitDetails_Permits">
+    <End Role="Permits" Type="Self.Permits" Multiplicity="1" />
+    <End Role="PermitDetails" Type="Self.PermitDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permits">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PermitDetails">
+        <PropertyRef Name="IDPermit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permits_SystemUsers_Permits">
+    <End Role="Permits" Type="Self.Permits" Multiplicity="1" />
+    <End Role="Permits_SystemUsers" Type="Self.Permits_SystemUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permits">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Permits_SystemUsers">
+        <PropertyRef Name="IDPermit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permits_SystemUsers_SystemUsers">
+    <End Role="SystemUsers" Type="Self.SystemUsers" Multiplicity="1" />
+    <End Role="Permits_SystemUsers" Type="Self.Permits_SystemUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemUsers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Permits_SystemUsers">
+        <PropertyRef Name="IDSystemUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="CountCategoryLeve1DisableInCategoryLevel2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CountCategoryLeve1EnableInCategoryLevel2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CountCategoryLeve1InCategoryLevel2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel2" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CountContentsDisableInCategoryLevel1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel1" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CountContentsEnableInCategoryLevel1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel1" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="CountContentsInCategoryLevel1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="CodeCategoryLevel1" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetAllInfoLogin_ByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetAllInfoLogin_ByIDUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SystemUsers_ID" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="GetAllInfoLogin_ByUserName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SplitStringToTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="string" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="data" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Configs" EntityType="Self.Configs" Schema="com" store:Type="Tables" />
+    <EntitySet Name="Languages" EntityType="Self.Languages" Schema="com" store:Type="Tables" />
+    <EntitySet Name="PermitDetails" EntityType="Self.PermitDetails" Schema="com" store:Type="Tables" />
+    <EntitySet Name="Permits" EntityType="Self.Permits" Schema="com" store:Type="Tables" />
+    <EntitySet Name="Permits_SystemUsers" EntityType="Self.Permits_SystemUsers" Schema="com" store:Type="Tables" />
+    <EntitySet Name="SystemUsers" EntityType="Self.SystemUsers" Schema="com" store:Type="Tables" />
+    <EntitySet Name="CategoryLevel1" EntityType="Self.CategoryLevel1" Schema="content" store:Type="Tables" />
+    <EntitySet Name="CategoryLevel1_CategoryLevel2" EntityType="Self.CategoryLevel1_CategoryLevel2" Schema="content" store:Type="Tables" />
+    <EntitySet Name="CategoryLevel2" EntityType="Self.CategoryLevel2" Schema="content" store:Type="Tables" />
+    <EntitySet Name="Contents" EntityType="Self.Contents" Schema="content" store:Type="Tables" />
+    <EntitySet Name="Contents_CategoryLevel1" EntityType="Self.Contents_CategoryLevel1" Schema="content" store:Type="Tables" />
+    <EntitySet Name="ExtendProperties" EntityType="Self.ExtendProperties" Schema="content" store:Type="Tables" />
+    <EntitySet Name="Albums" EntityType="Self.Albums" Schema="doc" store:Type="Tables" />
+    <EntitySet Name="Files" EntityType="Self.Files" Schema="doc" store:Type="Tables" />
+    <EntitySet Name="vw_CategoryLevel1ViewAll" EntityType="Self.vw_CategoryLevel1ViewAll" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_ID] AS [CategoryLevel1_ID], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryNameLevel1] AS [CategoryLevel1_CategoryNameLevel1], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Status] AS [CategoryLevel1_Status], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Disable] AS [CategoryLevel1_Disable], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Code] AS [CategoryLevel1_Code], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Type] AS [CategoryLevel1_Type], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Image] AS [CategoryLevel1_Image], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_Info] AS [CategoryLevel1_Info], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_ViewCount] AS [CategoryLevel1_ViewCount], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryLevel2_Status] AS [CategoryLevel1_CategoryLevel2_Status], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryLevel2_Type] AS [CategoryLevel1_CategoryLevel2_Type], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryLevel2_Disable] AS [CategoryLevel1_CategoryLevel2_Disable], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryLevel2_ID] AS [CategoryLevel1_CategoryLevel2_ID], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel2_ID] AS [CategoryLevel2_ID], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel2_CategoryNameLevel2] AS [CategoryLevel2_CategoryNameLevel2], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel2_Status] AS [CategoryLevel2_Status], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel2_Disable] AS [CategoryLevel2_Disable], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel2_Code] AS [CategoryLevel2_Code], 
+    [vw_CategoryLevel1ViewAll].[CategoryLevel1_CategoryLevel2_IDLang] AS [CategoryLevel1_CategoryLevel2_IDLang], 
+    [vw_CategoryLevel1ViewAll].[CountContent] AS [CountContent], 
+    [vw_CategoryLevel1ViewAll].[CountContentEnable] AS [CountContentEnable], 
+    [vw_CategoryLevel1ViewAll].[CountContentDisable] AS [CountContentDisable]
+    FROM [dbo].[vw_CategoryLevel1ViewAll] AS [vw_CategoryLevel1ViewAll]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_CategoryLevel2ViewAll" EntityType="Self.vw_CategoryLevel2ViewAll" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_CategoryLevel2ViewAll].[ID] AS [ID], 
+    [vw_CategoryLevel2ViewAll].[CategoryNameLevel2] AS [CategoryNameLevel2], 
+    [vw_CategoryLevel2ViewAll].[Status] AS [Status], 
+    [vw_CategoryLevel2ViewAll].[Disable] AS [Disable], 
+    [vw_CategoryLevel2ViewAll].[Code] AS [Code], 
+    [vw_CategoryLevel2ViewAll].[IDLang] AS [IDLang], 
+    [vw_CategoryLevel2ViewAll].[Type] AS [Type], 
+    [vw_CategoryLevel2ViewAll].[Note] AS [Note], 
+    [vw_CategoryLevel2ViewAll].[Image] AS [Image], 
+    [vw_CategoryLevel2ViewAll].[Image1] AS [Image1], 
+    [vw_CategoryLevel2ViewAll].[Image2] AS [Image2], 
+    [vw_CategoryLevel2ViewAll].[Image3] AS [Image3], 
+    [vw_CategoryLevel2ViewAll].[Tag] AS [Tag], 
+    [vw_CategoryLevel2ViewAll].[Info] AS [Info], 
+    [vw_CategoryLevel2ViewAll].[Intro] AS [Intro], 
+    [vw_CategoryLevel2ViewAll].[IDAlbum] AS [IDAlbum], 
+    [vw_CategoryLevel2ViewAll].[ViewCount] AS [ViewCount], 
+    [vw_CategoryLevel2ViewAll].[CountCategoryLeve1Disable] AS [CountCategoryLeve1Disable], 
+    [vw_CategoryLevel2ViewAll].[CountCategoryLeve1Enable] AS [CountCategoryLeve1Enable], 
+    [vw_CategoryLevel2ViewAll].[CountCategoryLeve1] AS [CountCategoryLeve1]
+    FROM [dbo].[vw_CategoryLevel2ViewAll] AS [vw_CategoryLevel2ViewAll]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_ContentsViewAll" EntityType="Self.vw_ContentsViewAll" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_ContentsViewAll].[Contents_UpdateBy] AS [Contents_UpdateBy], 
+    [vw_ContentsViewAll].[Contents_Type] AS [Contents_Type], 
+    [vw_ContentsViewAll].[Contents_PublishDate] AS [Contents_PublishDate], 
+    [vw_ContentsViewAll].[Contents_Title] AS [Contents_Title], 
+    [vw_ContentsViewAll].[Contents_ExpireDate] AS [Contents_ExpireDate], 
+    [vw_ContentsViewAll].[Contents_Info] AS [Contents_Info], 
+    [vw_ContentsViewAll].[Contents_Image] AS [Contents_Image], 
+    [vw_ContentsViewAll].[Contents_Status] AS [Contents_Status], 
+    [vw_ContentsViewAll].[Contents_CreatedBy] AS [Contents_CreatedBy], 
+    [vw_ContentsViewAll].[Contents_Disable] AS [Contents_Disable], 
+    [vw_ContentsViewAll].[Contents_DateCreated] AS [Contents_DateCreated], 
+    [vw_ContentsViewAll].[Contents_DateEdited] AS [Contents_DateEdited], 
+    [vw_ContentsViewAll].[Contents_ViewCount] AS [Contents_ViewCount], 
+    [vw_ContentsViewAll].[Contents_Code] AS [Contents_Code], 
+    [vw_ContentsViewAll].[Contents_CategoryLevel1_Status] AS [Contents_CategoryLevel1_Status], 
+    [vw_ContentsViewAll].[Contents_CategoryLevel1_Type] AS [Contents_CategoryLevel1_Type], 
+    [vw_ContentsViewAll].[Contents_CategoryLevel1_Disable] AS [Contents_CategoryLevel1_Disable], 
+    [vw_ContentsViewAll].[CategoryLevel1_CategoryNameLevel1] AS [CategoryLevel1_CategoryNameLevel1], 
+    [vw_ContentsViewAll].[CategoryLevel1_Status] AS [CategoryLevel1_Status], 
+    [vw_ContentsViewAll].[CategoryLevel1_Disable] AS [CategoryLevel1_Disable], 
+    [vw_ContentsViewAll].[CategoryLevel1_Code] AS [CategoryLevel1_Code], 
+    [vw_ContentsViewAll].[CategoryLevel1_Type] AS [CategoryLevel1_Type], 
+    [vw_ContentsViewAll].[CategoryLevel1_ViewCount] AS [CategoryLevel1_ViewCount], 
+    [vw_ContentsViewAll].[Contents_CategoryLevel1_IDLang] AS [Contents_CategoryLevel1_IDLang], 
+    [vw_ContentsViewAll].[Contents_Vote] AS [Contents_Vote], 
+    [vw_ContentsViewAll].[Contents_CommentCount] AS [Contents_CommentCount], 
+    [vw_ContentsViewAll].[Contents_LikeCount] AS [Contents_LikeCount], 
+    [vw_ContentsViewAll].[Contents_Intro] AS [Contents_Intro], 
+    [vw_ContentsViewAll].[CategoryLevel1_ID] AS [CategoryLevel1_ID], 
+    [vw_ContentsViewAll].[Contents_ID] AS [Contents_ID], 
+    [vw_ContentsViewAll].[Content_CategoryLevel1_ID] AS [Content_CategoryLevel1_ID]
+    FROM [dbo].[vw_ContentsViewAll] AS [vw_ContentsViewAll]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_FilesViewAll" EntityType="Self.vw_FilesViewAll" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_FilesViewAll].[Albums_ID] AS [Albums_ID], 
+    [vw_FilesViewAll].[Albums_Title] AS [Albums_Title], 
+    [vw_FilesViewAll].[Albums_Status] AS [Albums_Status], 
+    [vw_FilesViewAll].[Albums_Disable] AS [Albums_Disable], 
+    [vw_FilesViewAll].[Albums_Image] AS [Albums_Image], 
+    [vw_FilesViewAll].[Albums_Type] AS [Albums_Type], 
+    [vw_FilesViewAll].[Files_ID] AS [Files_ID], 
+    [vw_FilesViewAll].[Files_Image] AS [Files_Image], 
+    [vw_FilesViewAll].[Files_UploadDate] AS [Files_UploadDate], 
+    [vw_FilesViewAll].[Files_CreateByIDUser] AS [Files_CreateByIDUser], 
+    [vw_FilesViewAll].[Files_Status] AS [Files_Status], 
+    [vw_FilesViewAll].[Files_Type] AS [Files_Type], 
+    [vw_FilesViewAll].[Files_Disable] AS [Files_Disable], 
+    [vw_FilesViewAll].[Files_IDLang] AS [Files_IDLang], 
+    [vw_FilesViewAll].[Files_Code] AS [Files_Code], 
+    [vw_FilesViewAll].[Files_ViewCount] AS [Files_ViewCount], 
+    [vw_FilesViewAll].[Files_DownloadCount] AS [Files_DownloadCount], 
+    [vw_FilesViewAll].[Files_Title] AS [Files_Title], 
+    [vw_FilesViewAll].[Files_Intro] AS [Files_Intro], 
+    [vw_FilesViewAll].[Albums_Code] AS [Albums_Code]
+    FROM [dbo].[vw_FilesViewAll] AS [vw_FilesViewAll]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_PermitsViewAll" EntityType="Self.vw_PermitsViewAll" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_PermitsViewAll].[SystemUsers_ID] AS [SystemUsers_ID], 
+    [vw_PermitsViewAll].[SystemUsers_Username] AS [SystemUsers_Username], 
+    [vw_PermitsViewAll].[SystemUsers_UserGroup] AS [SystemUsers_UserGroup], 
+    [vw_PermitsViewAll].[SystemUsers_Status] AS [SystemUsers_Status], 
+    [vw_PermitsViewAll].[SystemUsers_Email] AS [SystemUsers_Email], 
+    [vw_PermitsViewAll].[SystemUsers_Type] AS [SystemUsers_Type], 
+    [vw_PermitsViewAll].[SystemUsers_Disable] AS [SystemUsers_Disable], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_IsView] AS [Permits_SystemUsers_IsView], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_IsUpdate] AS [Permits_SystemUsers_IsUpdate], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_IsDelete] AS [Permits_SystemUsers_IsDelete], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_IsInsert] AS [Permits_SystemUsers_IsInsert], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_IsSpecial] AS [Permits_SystemUsers_IsSpecial], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_Description] AS [Permits_SystemUsers_Description], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_Status] AS [Permits_SystemUsers_Status], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_Disable] AS [Permits_SystemUsers_Disable], 
+    [vw_PermitsViewAll].[Permits_SystemUsers_Type] AS [Permits_SystemUsers_Type], 
+    [vw_PermitsViewAll].[Permits_ID] AS [Permits_ID], 
+    [vw_PermitsViewAll].[Permits_IsContent] AS [Permits_IsContent], 
+    [vw_PermitsViewAll].[Permits_IsPartner] AS [Permits_IsPartner], 
+    [vw_PermitsViewAll].[Permits_SystemKey] AS [Permits_SystemKey], 
+    [vw_PermitsViewAll].[Permits_Disable] AS [Permits_Disable], 
+    [vw_PermitsViewAll].[Permits_Type] AS [Permits_Type], 
+    [vw_PermitsViewAll].[Permits_Status] AS [Permits_Status], 
+    [vw_PermitsViewAll].[Permits_Name] AS [Permits_Name], 
+    [vw_PermitsViewAll].[PermitDetails_Name] AS [PermitDetails_Name], 
+    [vw_PermitsViewAll].[PermitDetails_PageURL] AS [PermitDetails_PageURL], 
+    [vw_PermitsViewAll].[PermitDetails_Status] AS [PermitDetails_Status], 
+    [vw_PermitsViewAll].[PermitDetails_ID] AS [PermitDetails_ID], 
+    [vw_PermitsViewAll].[PermitDetails_Type] AS [PermitDetails_Type], 
+    [vw_PermitsViewAll].[PermitDetails_Disable] AS [PermitDetails_Disable]
+    FROM [dbo].[vw_PermitsViewAll] AS [vw_PermitsViewAll]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_PermitDetails_Permits" Association="Self.FK_PermitDetails_Permits">
+      <End Role="Permits" EntitySet="Permits" />
+      <End Role="PermitDetails" EntitySet="PermitDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permits_SystemUsers_Permits" Association="Self.FK_Permits_SystemUsers_Permits">
+      <End Role="Permits" EntitySet="Permits" />
+      <End Role="Permits_SystemUsers" EntitySet="Permits_SystemUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permits_SystemUsers_SystemUsers" Association="Self.FK_Permits_SystemUsers_SystemUsers">
+      <End Role="SystemUsers" EntitySet="SystemUsers" />
+      <End Role="Permits_SystemUsers" EntitySet="Permits_SystemUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

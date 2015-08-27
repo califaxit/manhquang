@@ -1,0 +1,11 @@
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\Entities.pdb
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\DataAccesss.dll
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\Library.dll
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\EntityFramework.dll
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\DataAccesss.pdb
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\Library.pdb
+D:\Data\WORK\Picker\Picker-Lotus\Entities\bin\Debug\EntityFramework.xml
+D:\Data\WORK\Picker\Picker-Lotus\Entities\obj\Debug\EntitiesExt.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\Picker-Lotus\Entities\obj\Debug\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\Entities\obj\Debug\Entities.pdb

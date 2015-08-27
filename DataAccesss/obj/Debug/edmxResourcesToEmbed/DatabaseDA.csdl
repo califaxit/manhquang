@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="SplitStringToTable_Result">
+    <Property Name="data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <EntityType Name="Configs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccessKey" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Group" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Languages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameLang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Directory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Filename" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PermitDetails">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermit" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PageURL" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <NavigationProperty Name="Permits" Relationship="Self.FK_PermitDetails_Permits" FromRole="PermitDetails" ToRole="Permits" />
+  </EntityType>
+  <EntityType Name="Permits">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsContent" Type="Boolean" />
+    <Property Name="IsPartner" Type="Boolean" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="SystemKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PermitDetails" Relationship="Self.FK_PermitDetails_Permits" FromRole="Permits" ToRole="PermitDetails" />
+    <NavigationProperty Name="Permits_SystemUsers" Relationship="Self.FK_Permits_SystemUsers_Permits" FromRole="Permits" ToRole="Permits_SystemUsers" />
+  </EntityType>
+  <EntityType Name="Permits_SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPermit" Type="Int32" Nullable="false" />
+    <Property Name="IDSystemUser" Type="Int32" Nullable="false" />
+    <Property Name="IsView" Type="Boolean" />
+    <Property Name="IsUpdate" Type="Boolean" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="IsSpecial" Type="Boolean" />
+    <Property Name="IsInsert" Type="Boolean" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Logs" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <NavigationProperty Name="Permits" Relationship="Self.FK_Permits_SystemUsers_Permits" FromRole="Permits_SystemUsers" ToRole="Permits" />
+    <NavigationProperty Name="SystemUsers" Relationship="Self.FK_Permits_SystemUsers_SystemUsers" FromRole="Permits_SystemUsers" ToRole="SystemUsers" />
+  </EntityType>
+  <EntityType Name="SystemUsers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserGroup" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Precision="0" />
+    <Property Name="Identifier1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Identifier2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Identifier3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Gender" Type="Int32" />
+    <Property Name="IDRefMailSystem" Type="Int32" />
+    <Property Name="IDRefAnotherSystem" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Identifier1CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier2CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="Identifier3CreatedDate" Type="DateTime" Precision="0" />
+    <Property Name="PlaceOfIssue1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfIssue2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceOfIssue3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Permits_SystemUsers" Relationship="Self.FK_Permits_SystemUsers_SystemUsers" FromRole="SystemUsers" ToRole="Permits_SystemUsers" />
+  </EntityType>
+  <EntityType Name="CategoryLevel1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryNameLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDLang" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDAlbum" Type="Int32" />
+    <Property Name="ViewCount" Type="Int64" />
+  </EntityType>
+  <EntityType Name="CategoryLevel1_CategoryLevel2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeCategoryLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodeCategoryLevel2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDLang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CategoryLevel2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryNameLevel2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDAlbum" Type="Int32" />
+    <Property Name="ViewCount" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Contents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="DateEdited" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IDAlbum" Type="Int32" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExtendProperties1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExtendProperties2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExtendProperties3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ViewCount" Type="Int64" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Vote" Type="Int64" />
+    <Property Name="CommentCount" Type="Int64" />
+    <Property Name="LikeCount" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Contents_CategoryLevel1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeContents" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CodeCategoryLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="IDLang" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ExtendProperties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ValueType" Type="Int32" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDObject" Type="Int32" />
+    <Property Name="ObjectType" Type="Int32" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Group" Type="Int32" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="CodeObject" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Albums">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateByIDUser" Type="Int64" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ViewCount" Type="Int64" />
+    <Property Name="DownloadCount" Type="Int64" />
+  </EntityType>
+  <EntityType Name="Files">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeAlbums" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UploadDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateByIDUser" Type="Int64" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Width" Type="Int32" />
+    <Property Name="Height" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ViewCount" Type="Int64" />
+    <Property Name="DownloadCount" Type="Int64" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_CategoryLevel1ViewAll">
+    <Key>
+      <PropertyRef Name="CategoryLevel1_ID" />
+      <PropertyRef Name="CountContent" />
+      <PropertyRef Name="CountContentEnable" />
+      <PropertyRef Name="CountContentDisable" />
+    </Key>
+    <Property Name="CategoryLevel1_ID" Type="Int32" Nullable="false" />
+    <Property Name="CategoryLevel1_CategoryNameLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_Status" Type="Int32" />
+    <Property Name="CategoryLevel1_Disable" Type="Boolean" />
+    <Property Name="CategoryLevel1_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_Type" Type="Int32" />
+    <Property Name="CategoryLevel1_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_ViewCount" Type="Int64" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Status" Type="Int32" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Type" Type="Int32" />
+    <Property Name="CategoryLevel1_CategoryLevel2_Disable" Type="Boolean" />
+    <Property Name="CategoryLevel1_CategoryLevel2_ID" Type="Int32" />
+    <Property Name="CategoryLevel2_ID" Type="Int32" />
+    <Property Name="CategoryLevel2_CategoryNameLevel2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel2_Status" Type="Int32" />
+    <Property Name="CategoryLevel2_Disable" Type="Boolean" />
+    <Property Name="CategoryLevel2_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_CategoryLevel2_IDLang" Type="Int32" />
+    <Property Name="CountContent" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountContentEnable" Type="String" MaxLength="66" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CountContentDisable" Type="String" MaxLength="67" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_CategoryLevel2ViewAll">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryNameLevel2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" />
+    <Property Name="Disable" Type="Boolean" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IDLang" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Tag" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IDAlbum" Type="Int32" />
+    <Property Name="ViewCount" Type="Int64" />
+    <Property Name="CountCategoryLeve1Disable" Type="Int32" />
+    <Property Name="CountCategoryLeve1Enable" Type="Int32" />
+    <Property Name="CountCategoryLeve1" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_ContentsViewAll">
+    <Key>
+      <PropertyRef Name="Contents_ID" />
+    </Key>
+    <Property Name="Contents_UpdateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_Type" Type="Int32" />
+    <Property Name="Contents_PublishDate" Type="DateTime" Precision="3" />
+    <Property Name="Contents_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_ExpireDate" Type="DateTime" Precision="3" />
+    <Property Name="Contents_Info" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_Status" Type="Int32" />
+    <Property Name="Contents_CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_Disable" Type="Boolean" />
+    <Property Name="Contents_DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="Contents_DateEdited" Type="DateTime" Precision="3" />
+    <Property Name="Contents_ViewCount" Type="Int64" />
+    <Property Name="Contents_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contents_CategoryLevel1_Status" Type="Int32" />
+    <Property Name="Contents_CategoryLevel1_Type" Type="Int32" />
+    <Property Name="Contents_CategoryLevel1_Disable" Type="Boolean" />
+    <Property Name="CategoryLevel1_CategoryNameLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_Status" Type="Int32" />
+    <Property Name="CategoryLevel1_Disable" Type="Boolean" />
+    <Property Name="CategoryLevel1_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_Type" Type="Int32" />
+    <Property Name="CategoryLevel1_ViewCount" Type="Int64" />
+    <Property Name="Contents_CategoryLevel1_IDLang" Type="Int32" />
+    <Property Name="Contents_Vote" Type="Int64" />
+    <Property Name="Contents_CommentCount" Type="Int64" />
+    <Property Name="Contents_LikeCount" Type="Int64" />
+    <Property Name="Contents_Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryLevel1_ID" Type="Int32" />
+    <Property Name="Contents_ID" Type="Int32" Nullable="false" />
+    <Property Name="Content_CategoryLevel1_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vw_FilesViewAll">
+    <Key>
+      <PropertyRef Name="Albums_ID" />
+      <PropertyRef Name="Files_ID" />
+    </Key>
+    <Property Name="Albums_ID" Type="Int32" Nullable="false" />
+    <Property Name="Albums_Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Albums_Status" Type="Int32" />
+    <Property Name="Albums_Disable" Type="Boolean" />
+    <Property Name="Albums_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Albums_Type" Type="Int32" />
+    <Property Name="Files_ID" Type="Int32" Nullable="false" />
+    <Property Name="Files_Image" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Files_UploadDate" Type="DateTime" Precision="3" />
+    <Property Name="Files_CreateByIDUser" Type="Int64" />
+    <Property Name="Files_Status" Type="Int32" />
+    <Property Name="Files_Type" Type="Int32" />
+    <Property Name="Files_Disable" Type="Boolean" />
+    <Property Name="Files_IDLang" Type="Int32" />
+    <Property Name="Files_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Files_ViewCount" Type="Int64" />
+    <Property Name="Files_DownloadCount" Type="Int64" />
+    <Property Name="Files_Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Files_Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Albums_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="vw_PermitsViewAll">
+    <Key>
+      <PropertyRef Name="SystemUsers_ID" />
+      <PropertyRef Name="Permits_ID" />
+      <PropertyRef Name="Permits_Name" />
+      <PropertyRef Name="PermitDetails_ID" />
+    </Key>
+    <Property Name="SystemUsers_ID" Type="Int32" Nullable="false" />
+    <Property Name="SystemUsers_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SystemUsers_UserGroup" Type="Int32" />
+    <Property Name="SystemUsers_Status" Type="Int32" />
+    <Property Name="SystemUsers_Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SystemUsers_Type" Type="Int32" />
+    <Property Name="SystemUsers_Disable" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsView" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsUpdate" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsDelete" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsInsert" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_IsSpecial" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Permits_SystemUsers_Status" Type="Int32" />
+    <Property Name="Permits_SystemUsers_Disable" Type="Boolean" />
+    <Property Name="Permits_SystemUsers_Type" Type="Int32" />
+    <Property Name="Permits_ID" Type="Int32" Nullable="false" />
+    <Property Name="Permits_IsContent" Type="Boolean" />
+    <Property Name="Permits_IsPartner" Type="Boolean" />
+    <Property Name="Permits_SystemKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Permits_Disable" Type="Boolean" />
+    <Property Name="Permits_Type" Type="Int32" />
+    <Property Name="Permits_Status" Type="Int32" />
+    <Property Name="Permits_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PermitDetails_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PermitDetails_PageURL" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="PermitDetails_Status" Type="Int32" />
+    <Property Name="PermitDetails_ID" Type="Int32" Nullable="false" />
+    <Property Name="PermitDetails_Type" Type="Int32" />
+    <Property Name="PermitDetails_Disable" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK_PermitDetails_Permits">
+    <End Role="Permits" Type="Self.Permits" Multiplicity="1" />
+    <End Role="PermitDetails" Type="Self.PermitDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permits">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PermitDetails">
+        <PropertyRef Name="IDPermit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permits_SystemUsers_Permits">
+    <End Role="Permits" Type="Self.Permits" Multiplicity="1" />
+    <End Role="Permits_SystemUsers" Type="Self.Permits_SystemUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Permits">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Permits_SystemUsers">
+        <PropertyRef Name="IDPermit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permits_SystemUsers_SystemUsers">
+    <End Role="SystemUsers" Type="Self.SystemUsers" Multiplicity="1" />
+    <End Role="Permits_SystemUsers" Type="Self.Permits_SystemUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SystemUsers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Permits_SystemUsers">
+        <PropertyRef Name="IDSystemUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseDA" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Configs" EntityType="Self.Configs" />
+    <EntitySet Name="Languages" EntityType="Self.Languages" />
+    <EntitySet Name="PermitDetails" EntityType="Self.PermitDetails" />
+    <EntitySet Name="Permits" EntityType="Self.Permits" />
+    <EntitySet Name="Permits_SystemUsers" EntityType="Self.Permits_SystemUsers" />
+    <EntitySet Name="SystemUsers" EntityType="Self.SystemUsers" />
+    <EntitySet Name="CategoryLevel1" EntityType="Self.CategoryLevel1" />
+    <EntitySet Name="CategoryLevel1_CategoryLevel2" EntityType="Self.CategoryLevel1_CategoryLevel2" />
+    <EntitySet Name="CategoryLevel2" EntityType="Self.CategoryLevel2" />
+    <EntitySet Name="Contents" EntityType="Self.Contents" />
+    <EntitySet Name="Contents_CategoryLevel1" EntityType="Self.Contents_CategoryLevel1" />
+    <EntitySet Name="ExtendProperties" EntityType="Self.ExtendProperties" />
+    <EntitySet Name="Albums" EntityType="Self.Albums" />
+    <EntitySet Name="Files" EntityType="Self.Files" />
+    <EntitySet Name="vw_CategoryLevel1ViewAll" EntityType="Self.vw_CategoryLevel1ViewAll" />
+    <EntitySet Name="vw_CategoryLevel2ViewAll" EntityType="Self.vw_CategoryLevel2ViewAll" />
+    <EntitySet Name="vw_ContentsViewAll" EntityType="Self.vw_ContentsViewAll" />
+    <EntitySet Name="vw_FilesViewAll" EntityType="Self.vw_FilesViewAll" />
+    <EntitySet Name="vw_PermitsViewAll" EntityType="Self.vw_PermitsViewAll" />
+    <AssociationSet Name="FK_PermitDetails_Permits" Association="Self.FK_PermitDetails_Permits">
+      <End Role="Permits" EntitySet="Permits" />
+      <End Role="PermitDetails" EntitySet="PermitDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permits_SystemUsers_Permits" Association="Self.FK_Permits_SystemUsers_Permits">
+      <End Role="Permits" EntitySet="Permits" />
+      <End Role="Permits_SystemUsers" EntitySet="Permits_SystemUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permits_SystemUsers_SystemUsers" Association="Self.FK_Permits_SystemUsers_SystemUsers">
+      <End Role="SystemUsers" EntitySet="SystemUsers" />
+      <End Role="Permits_SystemUsers" EntitySet="Permits_SystemUsers" />
+    </AssociationSet>
+    <FunctionImport Name="SplitStringToTable" IsComposable="true" ReturnType="Collection(Model.SplitStringToTable_Result)">
+      <Parameter Name="string" Mode="In" Type="String" />
+      <Parameter Name="delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllInfoLogin_ByEmail">
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllInfoLogin_ByIDUsers">
+      <Parameter Name="SystemUsers_ID" Mode="In" Type="Int64" />
+    </FunctionImport>
+    <FunctionImport Name="GetAllInfoLogin_ByUserName">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

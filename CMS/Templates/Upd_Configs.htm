@@ -1,0 +1,191 @@
+﻿<script src="/JS/ForEachPage/Process_Configs.js"></script>
+<script src="/JS/FRAMEWORK/BussinessLogic/ConfigsBO.js"></script>
+<div class="fluid">
+    <div class="widget">
+        <div class="whead">
+            <h6>Sửa Configs</h6>
+            <div class="clear"></div>
+        </div>
+        <!--Form-->
+        <form id="frmUpd_Configs" enctype="multipart/form-data" method="" action="ssss">
+            <input type="hidden" id="txtCode" name="txtCode" />
+            <div class="formRow">
+                <div class="grid8">
+                    <!--ID-->
+                    <input type="hidden" id="txtID" name="txtID" value="{$T.data.ID}" />
+
+                    <!--AccessKey Value-->
+                    <div class="formRow">
+                        <div class="grid2">
+                            AccessKey
+                        </div>
+                        <div class="grid4">
+                            <input type="text" id="txtAccessKey" name="txtAccessKey" value="{$T.data.AccessKey}" />
+                        </div>
+
+                        <div class="grid2">
+                            Value
+                        </div>
+                        <div class="grid4">
+                            <input type="text" id="txtValue" name="txtValue" value="{$T.data.Value}" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Status Type-->
+                    <div class="formRow">
+                        <div class="grid2">
+                            Status
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbStatus" name="cbbStatus">
+                                <option value="0" {#if $T.data.Status ==0} selected="selected" {#/if}>0</option>
+                                <option value="1" {#if $T.data.Status ==1} selected="selected" {#/if}>1</option>
+                                <option value="2" {#if $T.data.Status ==2} selected="selected" {#/if}>2</option>
+                                <option value="3" {#if $T.data.Status ==3} selected="selected" {#/if}>3</option>
+                                <option value="4" {#if $T.data.Status ==4} selected="selected" {#/if}>4</option>
+                            </select>
+                        </div>
+
+                        <div class="grid2">
+                            Type
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbType" name="cbbType">
+                                <option value="0" {#if $T.data.Type ==0} selected="selected" {#/if}>0</option>
+                                <option value="1" {#if $T.data.Type ==1} selected="selected" {#/if}>1</option>
+                                <option value="2" {#if $T.data.Type ==2} selected="selected" {#/if}>2</option>
+                                <option value="3" {#if $T.data.Type ==3} selected="selected" {#/if}>3</option>
+                                <option value="4" {#if $T.data.Type ==4} selected="selected" {#/if}>4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Group Note-->
+                    <div class="formRow">
+                        <div class="grid2">
+                            Group
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbGroup" name="cbbGroup">
+                                <option value="0" {#if $T.data.Group ==0} selected="selected" {#/if}>0</option>
+                                <option value="1" {#if $T.data.Group ==1} selected="selected" {#/if}>1</option>
+                                <option value="2" {#if $T.data.Group ==2} selected="selected" {#/if}>2</option>
+                                <option value="3" {#if $T.data.Group ==3} selected="selected" {#/if}>3</option>
+                                <option value="4" {#if $T.data.Group ==4} selected="selected" {#/if}>4</option>
+                            </select>
+                        </div>
+                        <div class="grid2">
+                            Note
+                        </div>
+                        <div class="grid4">
+                            <input type="text" id="txtNote" name="txtNote" value="{$T.data.Note}" />
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Disable-->
+                    <div class="formRowLast">
+                        <div class="grid2">
+                            Disable
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbDisable" name="cbbDisable">
+                                <option value="false" {#if $T.data.Disable ==false } selected="selected" {#/if}>False</option>
+                                <option value="true" {#if $T.data.Disable ==true } selected="selected" {#/if}>True</option>
+                            </select>
+                        </div>
+                        <div class="grid2"></div>
+                        <div class="grid4"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+
+
+            <!--Image-->
+            <div class="grid3">
+                <form></form>
+                <input type="hidden" id="txtImage_1" name="txtImage_1" form="frmUpd_Configs" value="{$T.data.Image}" />
+                <form id="Form_Upload_1" enctype="multipart/form-data" method="post" action="">
+                    <div style="width: 100%">
+                        {sys_GetText(10,'XXX')}<br />
+                        <input style="width: 100%" type="file" name="image_file_1" id="image_file_1" onchange="fileSelected(1);" />
+
+
+                        <div class="fileinfo" id="fileinfo_1">
+                            <div id="filename_1">
+                            </div>
+                            <div id="filesize_1">
+                            </div>
+                            <div id="filetype_1">
+                            </div>
+                            <div id="filedim_1">
+                            </div>
+                        </div>
+                        <img id="preview_1" width="100%" style="margin-bottom: 10px; margin-top: 10px" src='{sys_CommonType.URL_CMS}/Action/ProcessImageServiceAction.ashx?W=200&H=200&Scale=fit&Img={$T.data.Image}' alt="{$T.data.AccessKey}" />
+
+                        <input type="button" style="width: 100%; margin-top: 5px; margin-bottom: 10px" value="Upload" onclick="startUploading(1, 'Form_Upload_1', 'Contents_IMAGE', 'txtImage_1', true, -1, -1, true)" />
+                    </div>
+
+                    <div style="width: 100%">
+                        <div class="error" id="error_1">{sys_GetText(12,'XXX')}</div>
+                        <div class="error2" id="error2_1">{sys_GetText(13,'XXX')}</div>
+                        <div class="abort" id="abort_1">{sys_GetText(14,'XXX')}</div>
+                        <div class="warnsize" id="warnsize_1">{sys_GetText(15,'XXX')}</div>
+
+                        <div id="progress_info_1" class="progress_info">
+                            <div id="progress_1" class="progress">
+                            </div>
+                            <div id="progress_percent_1" class="progress_percent">
+                                &nbsp;
+                            </div>
+                            <div class="clear_both">
+                            </div>
+                            <div>
+                                <div id="speed_1" class="speed">
+                                    &nbsp;
+                                </div>
+                                <div id="remaining_1" class="remaining">
+                                    &nbsp;
+                                </div>
+                                <div id="b_transfered_1" class="b_transfered">
+                                    &nbsp;
+                                </div>
+                                <div class="clear_both">
+                                </div>
+                            </div>
+                            <input type="hidden" id="upload_response_1" />
+                            <!-- <input type="hidden" id="txtImage_1" />-->
+                        </div>
+                    </div>
+                </form>
+
+                <!--==============================================-->
+            </div>
+            <div class="gird3"></div>
+            <div class="gird3"></div>
+            <div class="gird3"></div>
+            <div class="clear"></div>
+        </form>
+
+        <!--save button-->
+        <div class="formRow">
+            <div class="grid9">
+                <div id="progress2">
+                    <span class="pbar"></span><span class="percent"></span><span class="elapsed"></span>
+                </div>
+            </div>
+            <div class="grid3">
+                <a class="buttonM bRed" onclick="ConfigsBO.Upd_ByID();">
+                    <span class="icon-checkmark-3"></span>
+                    <span>{sys_GetText(239,'Save')}</span>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

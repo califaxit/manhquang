@@ -1,0 +1,108 @@
+﻿<div class="container">
+    <div class="inner row clearfix">
+        <!--menu doc-->
+        <div id="hideverticalmenu" class="col-lg-3 col-md-3 col-sm-4 hidden-xs">
+            <div id="pav-verticalmenu" class="pav-verticalmenu hasicon box box-highlighted hidden-xs">
+                <div class="box-heading">
+                    <span>Danh Mục</span>
+                </div>
+                <div class="box-content">
+                    <div id="verticalmenu" class="verticalmenus" role="navigation">
+                        <div class="navbar navbar-vertical">
+                            <a href="javascript:;" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="icon-bar"></span>
+                            </a>
+                            <div class="collapse navbar-collapse navbar-ex1-collapse" style="height:auto;">
+                                <ul class="nav navbar-nav verticalmenu">
+                                    {#foreach $T.data as record}
+                                    {#if $T.record.Type==1}
+                                    <li class="parent dropdown ">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="menu-icon" style="background:url('image/catalog/icon-verticalmenu/icon08.png') no-repeat;"><span class="menu-title">{$T.record.CategoryNameLevel1}</span><b class="caret"></b></span></a><div class="dropdown-menu level1">
+                                            <div class="dropdown-menu-inner">
+                                                <div class="row">
+                                                    <div class="mega-col col-md-12" data-type="menu">
+                                                        <div class="mega-col-inner">
+                                                            <ul>
+                                                                {#foreach $T.data as}
+                                                                {#if $T.record.Type==2}
+                                                                {#if $T.record.Status=1}
+                                                                <li class=" "><a href="#"><span class="menu-title">{$T.record.CategoryNameLevel1}</span></a></li>
+                                                                {#/if}
+                                                                {#/if}
+                                                                {#/for}
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {#/if}
+                                    {#/for}                                   
+                               </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end menu doc-->
+        <!--menu-->
+        <div id="pav-mainnav" class="col-lg-9 col-md-9 col-sm-12">
+            <div class="pav-megamenu">
+                <div class="navbar navbar-mega" role="navigation">
+                    <div id="mainmenutop" class="megamenu" role="navigation">
+                        <div class="show-mobile hidden-lg hidden-md">
+                            <div class="quick-access pull-left">
+                                <button data-toggle="offcanvas" class="btn btn-outline visible-xs visible-sm" type="button"><span class="fa fa-bars"></span></button>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-megamenu">
+                            <ul class="nav navbar-nav megamenu">
+                                <li class="home"><a href="/"><span class=""></span><span class="menu-title">Trang chủ</span></a></li>
+                                <li class=" aligned-fullwidth parent dropdown ">
+                                    <a href="product.aspx" class="dropdown-toggle" data-toggle="dropdown"><span class=""></span><span class="menu-title">Sản phẩm</span><b class="caret"></b></a><div class="dropdown-menu" style="width:1170px">
+                                        <div class="dropdown-menu-inner">
+                                            <div class="row">
+                                                {#foreach $T.data as record}
+                                                {#if $T.record.Type==1}
+                                                <div class="mega-col col-xs-12 col-sm-12 col-md-3 ">
+                                                    <div class="mega-col-inner">
+                                                        <div class="pavo-widget" id="pavowid-26">
+                                                            <div class="pavo-widget" id="pavowid-735143602">
+                                                                <h4 class="widget-heading title">{$T.record.CategoryNameLevel1}</h4>
+                                                                <div class="">
+                                                                    <ul class="content">
+                                                                        {#foreach $T.data as record}
+                                                                        {#if $T.record.Type==2}
+                                                                        <li>
+                                                                            <a href="#">
+                                                                                <span>{$T.record.CategoryNameLevel1}</span>
+                                                                            </a>
+                                                                        </li>
+                                                                        {#/if}
+                                                                        {#/for}
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {#/if}
+                                                {#/for}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class=""><a href="#"><span class=""></span><span class="menu-title">Giới Thiệu</span></a></li>
+                                <li class=""><a href="#"><span class=""></span><span class="menu-title">Liên Hệ</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end menu-->
+    </div>
+</div>

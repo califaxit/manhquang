@@ -1,0 +1,14 @@
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\BussinessLogic.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\BussinessLogic.pdb
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\DataAccesss.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\EntityFramework.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\Library.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\Newtonsoft.Json.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\DataAccesss.pdb
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\Entities.pdb
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\bin\Debug\Library.pdb
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\obj\Debug\BussinessLogic.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\obj\Debug\BussinessLogic.dll
+D:\Data\WORK\Picker\Picker-Lotus\BussinessLogic\obj\Debug\BussinessLogic.pdb

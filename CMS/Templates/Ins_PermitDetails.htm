@@ -1,0 +1,106 @@
+﻿<script src="/JS/ForEachPage/Process_PermitDetails.js"></script>
+<script src="/JS/FRAMEWORK/BussinessLogic/PermitDetailsBO.js"></script>
+<script src="../JS/FRAMEWORK/BussinessLogic/PermitsBO.js"></script>
+<div class="fluid">
+    <div class="widget">
+        <div class="whead">
+            <h6>Thêm PermitDetails</h6>
+            <div class="clear"></div>
+        </div>
+        <!--Form-->
+        <form id="frmIns_PermitDetails" enctype="multipart/form-data" method="" action="ssss">
+            <input type="hidden" id="txtCode" name="txtCode" />
+            <div class="formRow">
+                <div class="grid8">
+                    <!--ID-->
+                    <input type="hidden" id="txtID" name="txtID" value="" />
+                    <!--IDPermit Name-->
+                    <div class="formRow">
+                        <div class="grid2">IDPermit</div>
+                        <div class="grid4" id="divPermit">
+
+                        </div>
+
+                        <div class="grid2">Name</div>
+                        <div class="grid4">
+                            <input type="text" id="txtName" name="txtName" value="" />
+                        </div>
+
+
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--PageURL Type-->
+                    <div class="formRowLast">
+                        <div class="grid2">PageURL</div>
+                        <div class="grid4">
+                            <input type="text" id="txtPageURL" name="txtPageURL" value="" />
+                        </div>
+
+                        <div class="grid2">
+                            <label>Type</label>
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbType" name="cbbType">
+                                <option value="0" selected="selected">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!--Status Disable-->
+                    <div class="formRow">
+                        <div class="grid2">
+                            Status
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbStatus" name="cbbStatus">
+                                <option value="0" selected="selected">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="grid2">
+                            Disable
+                        </div>
+                        <div class="grid4">
+                            <select id="cbbDisable" name="cbbDiable">
+                                <option value="false">False</option>
+                                <option value="true">True</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </form>
+    </div>
+    <div class="clear"></div>
+
+
+    <!--save button-->
+    <div class="formRow">
+        <div class="grid9">
+            <div id="progress2">
+                <span class="pbar"></span><span class="percent"></span><span class="elapsed"></span>
+            </div>
+        </div>
+        <div class="grid3">
+            <a class="buttonM bRed" onclick="PermitDetailsBO.Ins();">
+                <span class="icon-checkmark-3"></span>
+                <span>{sys_GetText(239,'Save')}</span>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>

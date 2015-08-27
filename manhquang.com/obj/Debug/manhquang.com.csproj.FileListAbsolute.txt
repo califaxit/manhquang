@@ -1,0 +1,96 @@
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Daotaocongnghe.com.dll.config
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Daotaocongnghe.com.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Daotaocongnghe.com.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\ActionHandler.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\BussinessLogic.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\CMS.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\CORE.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\DataAccesss.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Newtonsoft.Json.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Library.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\EntityFramework.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Entities.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\ActionHandler.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\BussinessLogic.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\CMS.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\CORE.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\DataAccesss.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Library.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\Entities.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\obj\Debug\manhquang.com.csprojResolveAssemblyReference.cache
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\obj\Debug\Daotaocongnghe.com.dll
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\obj\Debug\Daotaocongnghe.com.pdb
+D:\WORK\Picker\Picker-Lotus\Daotaocongnghe.com\bin\EntityFramework.SqlServer.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Daotaocongnghe.com.dll.config
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Daotaocongnghe.com.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Daotaocongnghe.com.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\ActionHandler.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\BussinessLogic.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\CMS.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\CORE.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\DataAccesss.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\EntityFramework.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\EntityFramework.SqlServer.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Newtonsoft.Json.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Library.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Entities.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\ActionHandler.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\BussinessLogic.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\CMS.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\CORE.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\DataAccesss.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Library.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\bin\Entities.pdb
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\obj\Debug\manhquang.com.csprojResolveAssemblyReference.cache
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\obj\Debug\Daotaocongnghe.com.dll
+D:\WORK\Picker\Picker-Lotus - Copy\Daotaocongnghe.com\obj\Debug\Daotaocongnghe.com.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Daotaocongnghe.com.dll.config
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Daotaocongnghe.com.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Daotaocongnghe.com.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\ActionHandler.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\BussinessLogic.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\CMS.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\CORE.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\DataAccesss.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\EntityFramework.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\EntityFramework.SqlServer.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Newtonsoft.Json.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Library.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Entities.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\ActionHandler.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\BussinessLogic.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\CMS.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\CORE.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\DataAccesss.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\EntityFramework.xml
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\EntityFramework.SqlServer.xml
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Library.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\bin\Entities.pdb
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\obj\Debug\manhquang.com.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\obj\Debug\Daotaocongnghe.com.dll
+D:\Data\WORK\Picker\Picker-Lotus\manhquang.com\obj\Debug\Daotaocongnghe.com.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Daotaocongnghe.com.dll.config
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Daotaocongnghe.com.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Daotaocongnghe.com.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\ActionHandler.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\BussinessLogic.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\CMS.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\CORE.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\DataAccesss.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\EntityFramework.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\EntityFramework.SqlServer.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Newtonsoft.Json.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Library.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Entities.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\ActionHandler.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\BussinessLogic.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\CMS.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\CORE.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\DataAccesss.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\EntityFramework.xml
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\EntityFramework.SqlServer.xml
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Library.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\bin\Entities.pdb
+D:\Data\WORK\Picker\manhquang\manhquang.com\obj\Debug\manhquang.com.csprojResolveAssemblyReference.cache
+D:\Data\WORK\Picker\manhquang\manhquang.com\obj\Debug\Daotaocongnghe.com.dll
+D:\Data\WORK\Picker\manhquang\manhquang.com\obj\Debug\Daotaocongnghe.com.pdb
