@@ -12,7 +12,7 @@ function Init_LotusTable() {
     //oTable.fnDestroy();
     InitLotusTable("#checkBll_Albums",
         {
-            'url': sys_CommonType.URL_CMS + '/Action/ProcessBackendAction.ashx?ActionObject=Albums&action=Sel',
+            'url': sys_CommonType.URL_CMS + '/Action/ProcessBackendAction.ashx?ActionObject=Albums&action=Sel_ByIDLang&IDLang=' + sys_CUR_LANG,
             'Col_Key': 'Code',
             'Col_Image': 'Image',
 
