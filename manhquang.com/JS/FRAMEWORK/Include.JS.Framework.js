@@ -6,6 +6,8 @@ document.write('<script type="text/javascript" src="JS/FRAMEWORK/Core.Language.j
 //menu
 document.write('<script src="JS/FRAMEWORK/BussinessLogic/CategoryLevel1BO.js"></script>');
 document.write('<script src="JS/FRAMEWORK/BussinessLogic/CategoryLevel2BO.js"></script>');
+//Albums-slider
+document.write('<script src="JS/FRAMEWORK/BussinessLogic/AlbumsBO.js"></script>');
 //Content
 document.write('<script src="JS/FRAMEWORK/BussinessLogic/ContentsBO.js"></script>');
 /////////////////////////////////////////////////////////////////////////

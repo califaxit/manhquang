@@ -227,6 +227,27 @@ var ContentsBO = {
     });
     return ret;
     },
+    Sel_Ext_ByCodeCategoryLevel1: function (CodeCategoryLevel1,IDLang, TitleLenght, IntroLenght, Limit, Order, IsDesc) {
+        if ((typeof (IDLang) == 'undefined') || (IDLang == '')) {
+            IDLang = sys_CUR_LANG;
+        }
+        var ret;
+        jQuery.ajax({
+            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=Sel_Ext_ByCodeCategoryLevel1&CodeCategoryLevel1=" + CodeCategoryLevel1 + "&Type=NormalContents&TitleLenght=" + TitleLenght + "&IntroLenght=" + IntroLenght + "&Limit=" + Limit + "&IsDesc=" + IsDesc + "&Order=" + Order + "&IDLang=" + IDLang,
+            type: "POST",
+            dataType: "json",
+            data: "",
+            success: function (data, dataStatus) {
+                ret = data;
+            },
+            timeout: 30000,
+            async: false,
+            error: function (request, error) {
+            }
+        });
+        return ret;
+    },
+    //############################################################################################################################
     //############################################################################################################################
     //QuyDQ
     Sel_ByIDLang: function ()
