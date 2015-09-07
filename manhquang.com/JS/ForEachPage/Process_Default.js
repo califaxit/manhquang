@@ -99,13 +99,13 @@ function Load_MenuTopHoz(div)
 {
      var data = CategoryLevel1BO.Sel_Ext_ByCodeCategoryLevel2_ByIDLang(CodeCateGoryLevel2);
      var html = "";
-        html += "		                                                               {#foreach $T.data as record}";  
-        html += "		                                                                   <li>";
-        html+= "		                                                                            <a href='#'>";
-        html += "		                                                                                <span>{$T.record.CategoryLevel1_CategoryNameLevel1}{$T.record.CategoryLevel1_ID}</span>";
-        html += "		                                                                            </a>";
-        html += "		                                                                        </li>";
-        html += "		                                                               {#/for} ";
+        html += " {#foreach $T.data as record}";  
+        html += "		 <li>";
+        html+= "		    <a href='#'>";
+        html += "		          <span>{$T.record.CategoryLevel1_CategoryNameLevel1}{$T.record.CategoryLevel1_ID}</span>";
+        html += "		     </a>";
+        html += "		 </li>";
+        html += " {#/for} ";
    
     
      jQuery(div).setTemplate(html);
@@ -209,10 +209,10 @@ function Load_MenuTopHoz(div)
      var html = "";
      for (var i = 0; i < datap.data.length; i++) {
          if (i == 0)
-         { html += "	<div class='tab-pane active' id='tab" + datap.data[i].CategoryLevel1_Code + "'>"; }
+         { html += "<div class='tab-pane active' id='tab" + datap.data[i].CategoryLevel1_Code + "'>";}
          else
-         { html += "	<div class='tab-pane' id='tab" + datap.data[i].CategoryLevel1_Code + "'>"; }
-        
+         { html += "<div class='tab-pane' id='tab" + datap.data[i].CategoryLevel1_Code + "'>"; }
+        // html += "<div class='tab-pane active' id='tab" + datap.data[i].CategoryLevel1_Code + "'>";
          html += "	                                                            <!--control-->";
          html += "	                                                            <div class='carousel-controls'>";
          html += "	                                                                <a class='carousel-control left' href='#list378" + datap.data[i].CategoryLevel1_Code + "' data-slide='prev'><i class='fa fa-angle-left'></i></a>";
@@ -220,53 +220,38 @@ function Load_MenuTopHoz(div)
          html += "	                                                            </div>";
          html += "	                                                            <!--end control-->";
          html += "	                                                            <div class='carousel-inner carousel378 slide' id='list378" + datap.data[i].CategoryLevel1_Code + "'>";
-         html += "	                                                                <!--tab1- active-->";
-         //html += "	                                                                <div class='item active'>";
-         //html += "	                                                                    <div class='row products-row last'>";
-         //html += "	                                                                        <!--product-->";
-         html += LoadContent(datap.data[i].CategoryLevel1_Code, 1);
-         /////product
-         //html += "	                                                                        <!--product-->";
-         //html += "	                                                                    </div>";
-         //html += "	                                                                </div>";
-         //html += "																		";
-         //html += "	                                                                <!--end tab1-->	";
-         //html += "	                                                                <div class='item '>	";
-         //html += "	                                                                    <div class='row products-row last'>";
-         //html += LoadContent(datap.data[i].CategoryLevel1_Code, 1);
-         //html += "	                                                                    </div>";
-         //html += "	                                                                </div>	";
-         html += "	                                                          </div>";//end tab
-         html += "	                                                        </div>";
+         html += LoadContent(datap.data[i].CategoryLevel1_Code, 1,8);
+         html += "	</div>";//end tab
+         html += "</div>";
      }
      return html;
 
  }
+ 
 
- function LoadContent(CodeCategoryLevel1, IDLang)
+ function LoadContent(CodeCategoryLevel1, IDLang,Limit)
 {
     
-     var data_contents = ContentsBO.Sel_Ext_ByCodeCategoryLevel1(CodeCategoryLevel1, IDLang);
+     var data_contents = ContentsBO.Sel_Ext_ByCodeCategoryLevel1(CodeCategoryLevel1, IDLang,Limit);
      var html = "";
+     var k = 0;
      html += "	                                                                <div class='item active'>";
      html += "	                                                                    <div class='row products-row last'>";
-     
-     var k = 0;
-     for (var i = 0; i < data_contents.data.length; i++) {
-
-         k++;
-    
+     for (var i = 0; i <data_contents.data.length; i++) {
+      k++;
      html += "	                                                                        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col'>";
      html += "	                                                                            <div class='product-block item-default clearfix' itemtype='#' itemscope>";
-     html += "	                                                                                <span class='product-label ribbon label-special'><span class='product-label-special'>Giảm giá</span></span>	";
+     if(data_contents.data[i].Contents_ExtendProperties1<data_contents.data[i].Contents_ExtendProperties2){
+         html += "	                                                                                <span class='product-label ribbon label-special'><span class='product-label-special'>Giảm giá" + ((data_contents.data[i].Contents_ExtendProperties2 - data_contents.data[i].Contents_ExtendProperties1) / data_contents.data[i].Contents_ExtendProperties2)*100 + "%</span></span>	";
+     }
      html += "	                                                                                <div class='images clearfix'>";
      html += "	                                                                                    <a class='img' itemprop='url' title='Furabitur sedg' href='#chitiet'>";
-     html += "	                                                                                        <img class='img-responsive' itemprop='image' src='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=600&H=600&Scale=crop&Img=" + data_contents.data[i].Contents_Image + "' title='" + data_contents.data[i].Contents_Title + "' alt='" + data_contents.data[i].Contents_Title + "' /> ";
+     html += "	                                                                                        <img class='img-responsive' itemprop='image' src='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=400&H=400&Scale=crop&Img=" + data_contents.data[i].Contents_Image + "' title='" + data_contents.data[i].Contents_Title + "' alt='" + data_contents.data[i].Contents_Title + "' /> ";
      html += "	                                                                                    </a>";
      html += "	                                                                                    <a class='pav-colorbox btn btn-inverse iframe-link' data-toggle='tooltip' href='/Introdetail.html' title='Xem nhanh'>";
      html += "	                                                                                        <i class='fa fa-eye'></i>";
      html += "	                                                                                  </a>";
-     html += "	                                                                                    <a href='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=600&H=600&Scale=crop&Img=" + data_contents.data[i].Contents_Image + "' title='" + data_contents.data[i].Contents_Title + "' class='btn btn-inverse colorbox product-zoom cboxElement' title='Furabitur sedg'> ";
+     html += "	                                                                                    <a href='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=400&H=400&Scale=crop&Img=" + data_contents.data[i].Contents_Image + "' title='" + data_contents.data[i].Contents_Title + "' class='btn btn-inverse colorbox product-zoom cboxElement' title='Furabitur sedg'> ";
      html += "	                                                                                    <i class='fa fa-search-plus'></i>";
      html += "	                                                                                    </a>";
      html += "	                                                                                </div>	";
@@ -277,8 +262,8 @@ function Load_MenuTopHoz(div)
      html += "	                                                                                                <h3 class='name' itemprop='name'> <a href=''>" + data_contents.data[i].Contents_Title +"</a></h3>";
      html += "	                                                                                            </div>																	";
      html += "	                                                                                            <div class='price clearfix' itemtype='http://schema.org/Offer' itemscope itemprop='offers'>	";
-     html += "	                                                                                                <span class='price-new'>$290,00</span>";
-     html += "	                                                                                                <span class='price-old'>$300,00</span>";
+     html += "	                                                                                                <span class='price-new'>"+data_contents.data[i].Contents_ExtendProperties1+"vnđ</span>";
+     html += "	                                                                                                <span class='price-old'>" + data_contents.data[i].Contents_ExtendProperties2 +"vnđ</span>";
      html += "	                                                                                            </div>";
      html += "	                                                                                            <div class='clearfix'></div>";
      html += "	                                                                                            <p class='description' itemprop='description'></p>";
@@ -289,238 +274,211 @@ function Load_MenuTopHoz(div)
      html += "	                                                                        </div>";
      if (i % 3 == 2)
      {
-         
-         if (i == data_contents.data.length)
+         html += " </div>";
+         html += " </div>";
+
+        
+         ////alert(i);
+        if (i!= data_contents.data.length-1)
          {
-             html += "</div></div>";
-             html += "";
+             html += " <div class='item'>";
+             html += "<div class='row products-row '>";
+            
          }
-         else
-         {
-             html += "</div></div>";
-             html += "	                                                                <div class='item'>";
-             html += "	                                                                    <div class='row products-row '>";
-         }
-       
 
      }
-     
-    
      }
-     
-         html += "	                                                                    </div>";
-         html += "	                                                                </div>";
-     
-    
-     //
-     //html += "	                                                                    </div>";
-     //html += "	                                                                </div>";
-     return html;
+     if (k % 3 == 0)
+     {
+         return html;
+     }
+     else
+     {
+         html += " </div>";
+         html += " </div>";
+         return html;
+     }
+      
     
      
  }
 // slider
 //------------------------------sliderTop-------------------//
- function loadsliderTop()
+ function loadsliderTop(div)
  {
-
+     var dataslider = AlbumsBO.Sel_ByType_ByIDLang(0, 1, false);// type, Ilang, Disable   
      var html = "";
-     html+="	<div class='container-full'>															";
-     html+="	        <div class='inner'>															";
-     html+="	            <div class='row'>															";
-     html+="	                <div class='col-lg-12 col-md-12  '>															";
-     html+="	                    <div class='layerslider'>															";
+     html+="	<div class='container-full'>";
+     html+="	        <div class='inner'>	";
+     html+="	            <div class='row'>";
+     html+="	                <div class='col-lg-12 col-md-12 '>	";
+     html+="	                    <div class='layerslider'>";
      html+="	                        <div class='bannercontainer banner-fullwidth' style='padding: 0px 0px;margin: 0px 0px 0px;'>															";
      html+="	                            <div id='sliderlayer285765615' class='rev_slider fullwidthbanner' style='width:100%;height:480px; '>															";
-     html+="																";
-     html+="																";
-     html+="	                               <ul>															";
-     html+="	                                    <!--lặp 3 lần--> 															";
-     html+="	                                    <li data-masterspeed='300' data-transition='random' data-slotamount='7' data-thumb='image/catalog/layerslider/slider-bg1.jpg'>															";
-     html+="																";
-     html+="																";
-     html+="	                                        <img src='image/catalog/layerslider/slider-bg1.jpg' alt='Image 0' />															";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption big_great sft															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html += "	                               <ul>															";
+     for (var i = 0; i < dataslider.data.length; i++)
+     {
+     html+="	                                    <li data-masterspeed='300' data-transition='random' data-slotamount='7' data-thumb='image/catalog/layerslider/slider-bg1.jpg'>";
+     html += "	                                        <img src='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=1400&H=480&Scale=crop&Img=" + dataslider.data[i].Image + "' alt='Image 0' />";
+     html+="	                                        <div class='caption big_great sft";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                  data-x='112'";
-     html+="	                                             data-y='77'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='400'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	                                            Get into new season															";
-     html+="	                                        </div>															";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption big_red sft															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html+="	                                             data-y='77'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='400'";
+     html+="	                                             data-easing='easeOutExpo'>";
+     html+="	                                            Hãy Đến với Chúng Tôi	";
+     html+="	                                        </div>";
+     html+="	                                        <div class='caption big_red sft";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                 data-x='123'";
-     html+="	                                             data-y='171'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='1053'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	25															";
-     html+="	                                        </div>															";
+     html+="	                                             data-y='171'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='1053'";
+     html+="	                                             data-easing='easeOutExpo'>";
+    // html+="	                                                        25";
+     html+="	                                        </div>";
+     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->";
      html+="																";
      html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption small_red sft															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html+="	                                        <div class='caption small_red sft";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                 data-x=231'";
-     html+="	                                             data-y='179'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='1497'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	                                            %															";
-     html+="	                                        </div>															";
+     html+="	                                             data-y='179'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='1497'";
+     html+="	                                             data-easing='easeOutExpo'>";
+    // html+="	                                            %";
+     html+="	                                        </div>";
      html+="																";
      html+="																";
      html+="																";
      html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
+     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->";
      html+="																";
      html+="																";
-     html+="	                                        <div class='caption big_black sfr															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html+="	                                        <div class='caption big_black sfr";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                 data-x=277'";
-     html+="	                                             data-y='177'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='2044'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	                                            OFF															";
-     html+="	                                        </div>															";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption medium_black sfb															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html+="	                                             data-y='177'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='2044'";
+     html+="	                                             data-easing='easeOutExpo'>";
+     //html+="	                                            OFF	";
+     html+="	                                        <div class='caption medium_black sfb";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                 data-x=112'";
-     html+="	                                             data-y='266'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='2771'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	                                            Wash cool save energy a revolution in washing															";
-     html+="	                                        </div>															";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption btn-links btn-inverse sfb															";
+     html+="	                                             data-y='266'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='2771'";
+     html+="	                                             data-easing='easeOutExpo'>";
+    // html+="	                                            Wash cool save energy a revolution in washing";
+     html+="	                                        </div>";
+     html+="	                                        <div class='caption btn-links btn-inverse sfb";
      html+="												easeOutExpo   easeOutExpo				";
      html+="												"
      html+="                                                 data-x=119'";
-     html+="	                                             data-y='323'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='3481'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="	                                            view collection															";
-     html+="	                                        </div>															";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="																";
-     html+="	                                        <!-- THE MAIN IMAGE IN THE SLIDE -->															";
-     html+="																";
-     html+="																";
-     html+="	                                        <div class='caption  sfr															";
-     html+="												easeOutExpo   easeOutExpo				";
+     html+="	                                             data-y='323'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='3481'";
+     html+="	                                             data-easing='easeOutExpo'>	";
+    // html+="	                                            view collection	";
+     html+="	                                        </div>";
+     html+="	                                        <div class='caption  sfr";
+     html+="												easeOutExpo   easeOutExpo";
      html+="												"
      html+="                                                 data-x=993'";
-     html+="	                                             data-y='0'															";
-     html+="	                                             data-speed='300'															";
-     html+="	                                             data-start='3874'															";
-     html+="	                                             data-easing='easeOutExpo'>															";
-     html+="																";
-     html+="	                                            <img src='image/catalog/layerslider/special-1.png' alt='catalog/layerslider/special-1.png' />															";
-     html+="																";
-     html+="	                                        </div>															";
-     html+="																";
-     html+="																";
-     html+="	                                    </li>															";
-     html+="																";
-     html+="	                                     <!--End-->															";
-     html+="	                                </ul>															";
-     html+="																";
-     html+="	                                <div class='tp-bannertimer tp-top'></div>															";
-     html+="	                            </div>															";
-     html+="	                        </div>															";
-     html+="	                        <!--															";
-     html+="	                        ##############################															";
-     html+="	                         - ACTIVATE THE BANNER HERE -															";
-     html+="	                        ##############################															";
-     html+="	                        -->															";
-     html+="	                        <script type='text/javascript'>															";
-     html+="	                            var tpj = jQuery;															";
-     html+="	                            if (tpj.fn.cssOriginal != undefined)															";
-     html+="	                                tpj.fn.css = tpj.fn.cssOriginal;															";
-     html+="																";
-     html+="	                            tpj('#sliderlayer285765615').revolution(															";
-     html+="	                                {															";
-     html+="	                                    delay: 9000,															";
-     html+="	                                    startheight: 480,															";
-     html+="	                                    startwidth: 1170,															";
-     html+="																";
-     html+="																";
-     html+="	                                    hideThumbs: 200,															";
-     html+="																";
-     html+="	                                    thumbWidth: 100,															";
-     html+="	                                    thumbHeight: 50,															";
-     html+="	                                    thumbAmount: 5,															";
-     html+="																";
-     html+="	                                    navigationType: 'none',															";
+     html+="	                                             data-y='0'";
+     html+="	                                             data-speed='300'";
+     html+="	                                             data-start='3874'";
+     html+="	                                             data-easing='easeOutExpo'>";
+    // html+="	                                            <img src='image/catalog/layerslider/special-1.png' alt='catalog/layerslider/special-1.png' />";
+     html+="	                                        </div>";
+     html += "	                                    </li>";
+      }
+     html+="	                                     <!--End-->";
+     html+="	                                </ul>";
+     html+="	                                <div class='tp-bannertimer tp-top'></div>";
+     html+="	                            </div>";
+     html+="	                        </div>";
+     html+="	                        <!--";
+     html+="	                        ##############################";
+     html+="	                         - ACTIVATE THE BANNER HERE -";
+     html+="	                        ##############################";
+     html+="	                        -->	";
+     html+="	                        <script type='text/javascript'>	";
+     html+="	                            var tpj = jQuery;";
+     html+="	                            if (tpj.fn.cssOriginal != undefined)";
+     html+="	                                tpj.fn.css = tpj.fn.cssOriginal;";
+     html+="	                            tpj('#sliderlayer285765615').revolution(";
+     html+="	                                {";
+     html+="	                                    delay: 9000,";
+     html+="	                                    startheight: 480,";
+     html+="	                                    startwidth: 1170,";
+     html+="	                                    hideThumbs: 200,";
+     html+="	                                    thumbWidth: 100,";
+     html+="	                                    thumbHeight: 50,";
+     html+="	                                    thumbAmount: 5,	";
+     html+="	                                    navigationType: 'none',	";
      html+="	                                    navigationArrows: 'verticalcentered',															";
-     html+="	                                    navigationStyle: 'round',															";
+     html+="	                                    navigationStyle: 'round',";
      html+="																";
-     html+="	                                    navOffsetHorizontal: 0,															";
-     html+="	                                    navOffsetVertical: 20,															";
+     html+="	                                    navOffsetHorizontal: 0,	";
+     html+="	                                    navOffsetVertical: 20,	";
      html+="																";
-     html+="	                                    touchenabled: 'on',															";
-     html+="	                                    onHoverStop: 'on',															";
-     html+="	                                    shuffle: 'off',															";
-     html+="	                                    stopAtSlide: -1,															";
-     html+="	                                    stopAfterLoops: -1,															";
-     html+="																";
-     html+="	                                    hideCaptionAtLimit: 0,															";
-     html+="	                                    hideAllCaptionAtLilmit: 0,															";
-     html+="	                                    hideSliderAtLimit: 0,															";
-     html+="	                                    fullWidth: 'on',															";
-     html+="	                                    shadow: 0															";
-     html+="																";
-     html+="	                                });															";
-     html+="																";
-     html+="	                        </script>															";
-     html+="	                    </div>															";
-     html+="	                </div>															";
-     html+="	            </div>															";
-     html+="	        </div>															";
-     html+="	    </div>															";
+     html+="	                                    touchenabled: 'on',	";
+     html+="	                                    onHoverStop: 'on',";
+     html+="	                                    shuffle: 'off',	";
+     html+="	                                    stopAtSlide: -1,";
+     html+="	                                    stopAfterLoops: -1,";
+     html+="	                                    hideCaptionAtLimit: 0,	";
+     html+="	                                    hideAllCaptionAtLilmit: 0,	";
+     html+="	                                    hideSliderAtLimit: 0,";
+     html+="	                                    fullWidth: 'on',";
+     html+="	                                    shadow: 0	";
+     html+="	                                });";
+     html+="	                        </script>";
+     html+="	                    </div>";
+     html+="	                </div>";
+     html+="	            </div>";
+     html+="	        </div>";
+     html+="	    </div>";
+     jQuery(div).html(html);
+
+ }
+ function loadsliderBot(div) {
+     var dataslider = AlbumsBO.Sel_ByType_ByIDLang(1, 1, false);// type, Ilang, Disable 
+     
+     var html = "";                                                       																																	
+     html+="	   <div class='item active'>";
+     html += "	     <div class='row'>";
+     for (var i = 0; i < dataslider.data.length; i++) {
 
 
+         html += "	        <div class='col-lg-3 col-xs-6 col-sm-2'>";
+         html += "	             <div class='item-inner'>";
+         html += "	               <a href='#'><img src='" + sys_CommonType.URL_CMS + "/Action/ProcessImageServiceAction.ashx?W=153&H=51&Scale=crop&Img=" + dataslider.data[i].Image + "' alt='Banner 1' class='img-responsive' /></a>";
+         html += "	             </div>";
+         html += "	         </div>";
+         if(i%4==3)
+         {
+            
+                 html += "	      </div>";
+                 html += "	    </div>";
+                 if (i!= dataslider.data.length - 1)
+                     {
+                 html += "	  <div class='item'>	";
+                 html += "	    <div class='row'>	";
+                     }
+         }
+     }    
+     html+="</div>";
+     html+="</div>";
+     
+     jQuery(div).html(html);
  }
