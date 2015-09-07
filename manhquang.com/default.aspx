@@ -9,17 +9,17 @@
     <link href="images/favicon.ico" rel="icon" />  
     <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
     <script src="JS/FRAMEWORK/Include.JS.Framework.js"></script>
-    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script>
-    
+    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script>   
      <script type="text/javascript">
          // khởi tạo ngôn ngữ mặc định
          Init_System_WEB();
 
          window.onload = function () {
-
              Load_MenuTopVer("#verticalmenu");
              Load_MenuTopHoz("#bs-megamenu");
+             loadsliderTop("#pavo-slideshow");
              LoadCateGoryLevel2("#ContentCategory");
+             loadsliderBot("#sliderbot");
 
          };
           </script>
@@ -89,7 +89,7 @@
                                     <div class="inner col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div id="search-auto" class=" search-box search-wrapper clearfix clearfix">
                                             <div class=" search_block">
-                                                <form method="GET" action="http://dothotuongphat.com/index.php" class="input-group search-box">
+                                                <form method="GET" action="" class="input-group search-box">
                                                     <div class="filter_type category_filter input-group-addon group-addon-select icon-select">
                                                         <select name="category_id" class="no-border">
                                                             <option value="0">Tất cả Danh Mục</option>
@@ -363,445 +363,7 @@
             </div>
             <!-- /sys-notification -->
             <div class="slideshow " id="pavo-slideshow">
-                <div class="container-full">
-                    <div class="inner">
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12  ">
-                                <div class="layerslider">
-                                    <div class="bannercontainer banner-fullwidth" style="padding: 0px 0px;margin: 0px 0px 0px;">
-                                        <div id="sliderlayer" class="rev_slider fullwidthbanner" style="width:100%;height:480px; ">
-                                            <ul>
-                                                <li data-masterspeed="300" data-transition="random" data-slotamount="7" data-thumb="images/Slider/Top/slider-bg1.jpg">
-                                                    <img src="images/Slider/Top/slider-bg1.jpg" alt="Image 0" />
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_great sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="112"
-                                                         data-y="77"
-                                                         data-speed="300"
-                                                         data-start="400"
-                                                         data-easing="easeOutExpo">
-                                                        Get into new season
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="123"
-                                                         data-y="171"
-                                                         data-speed="300"
-                                                         data-start="1053"
-                                                         data-easing="easeOutExpo">
-                                                        25
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption small_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="231"
-                                                         data-y="179"
-                                                         data-speed="300"
-                                                         data-start="1497"
-                                                         data-easing="easeOutExpo">
-                                                        %
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_black sfr
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="277"
-                                                         data-y="177"
-                                                         data-speed="300"
-                                                         data-start="2044"
-                                                         data-easing="easeOutExpo">
-                                                        OFF
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption medium_black sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="112"
-                                                         data-y="266"
-                                                         data-speed="300"
-                                                         data-start="2771"
-                                                         data-easing="easeOutExpo">
-                                                        Wash cool save energy a revolution in washing
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption btn-links btn-inverse sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="119"
-                                                         data-y="323"
-                                                         data-speed="300"
-                                                         data-start="3481"
-                                                         data-easing="easeOutExpo">
-                                                        view collection
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption  sfr
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="993"
-                                                         data-y="0"
-                                                         data-speed="300"
-                                                         data-start="3874"
-                                                         data-easing="easeOutExpo">
-
-                                                      <%--  <img src="images/Slider/Top/special-1.png" alt="special" />--%>
-
-                                                    </div>
-
-
-                                                </li>
-
-
-
-                                                <li data-masterspeed="300" data-transition="random" data-slotamount="7" data-thumb="images/Slider/Top/slide_06.JPG">
-
-
-                                                    <img src="images/Slider/Top/slide_06.JPG" alt="Image 1" />
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_great sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="717"
-                                                         data-y="17"
-                                                         data-speed="300"
-                                                         data-start="400"
-                                                         data-easing="easeOutExpo">
-                                                        Get into new season
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="722"
-                                                         data-y="100"
-                                                         data-speed="300"
-                                                         data-start="1053"
-                                                         data-easing="easeOutExpo">
-                                                        25
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption small_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="823"
-                                                         data-y="113"
-                                                         data-speed="300"
-                                                         data-start="1497"
-                                                         data-easing="easeOutExpo">
-                                                        %
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_black sfr
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="880"
-                                                         data-y="104"
-                                                         data-speed="300"
-                                                         data-start="2044"
-                                                         data-easing="easeOutExpo">
-                                                        OFF
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption medium_roboto_white sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="722"
-                                                         data-y="188"
-                                                         data-speed="300"
-                                                         data-start="2771"
-                                                         data-easing="easeOutExpo">
-                                                        Wash cool save energy a revolution in washing
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption btn-links btn-inverse sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="732"
-                                                         data-y="241"
-                                                         data-speed="300"
-                                                         data-start="3481"
-                                                         data-easing="easeOutExpo">
-                                                        view collection
-                                                    </div>
-
-
-                                                </li>
-
-
-
-                                                <li data-masterspeed="300" data-transition="random" data-slotamount="7" data-thumb="images/Slider/Top/slider-bg2.JPG">
-
-
-                                                    <img src="images/Slider/Top/slider-bg2.JPG" alt="Image 2" />
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_great_white sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="112"
-                                                         data-y="77"
-                                                         data-speed="300"
-                                                         data-start="400"
-                                                         data-easing="easeOutExpo">
-                                                        Get into new season
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="123"
-                                                         data-y="171"
-                                                         data-speed="300"
-                                                         data-start="1053"
-                                                         data-easing="easeOutExpo">
-                                                        25
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption small_red sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="231"
-                                                         data-y="179"
-                                                         data-speed="300"
-                                                         data-start="1497"
-                                                         data-easing="easeOutExpo">
-                                                        %
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption big_white sfr
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="277"
-                                                         data-y="177"
-                                                         data-speed="300"
-                                                         data-start="2044"
-                                                         data-easing="easeOutExpo">
-                                                        OFF
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption medium_roboto_white sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="112"
-                                                         data-y="266"
-                                                         data-speed="300"
-                                                         data-start="2771"
-                                                         data-easing="easeOutExpo">
-                                                        Wash cool save energy a revolution in washing
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption btn-links btn-outline sfb
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="119"
-                                                         data-y="323"
-                                                         data-speed="300"
-                                                         data-start="3481"
-                                                         data-easing="easeOutExpo">
-                                                        view collection
-                                                    </div>
-
-
-
-
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
-
-
-                                                    <div class="caption  sft
-											easeOutExpo   easeOutExpo
-											"
-                                                         data-x="676"
-                                                         data-y="0"
-                                                         data-speed="300"
-                                                         data-start="4208"
-                                                         data-easing="easeOutExpo">
-
-                                                        <%--<img src="image/catalog/layerslider/special-1.png" alt="catalog/layerslider/special-1.png" />--%>
-
-                                                    </div>
-
-
-                                                </li>
-
-
-
-
-
-
-                                            </ul>
-                                            <div class="tp-bannertimer tp-top"></div>
-                                        </div>
-                                    </div>
-                                    <!--
-                                    ##############################
-                                     - ACTIVATE THE BANNER HERE -
-                                    ##############################
-                                    -->
-                                    <script type="text/javascript">
-                                        var tpj = jQuery;
-                                        if (tpj.fn.cssOriginal != undefined)
-                                            tpj.fn.css = tpj.fn.cssOriginal;
-
-                                        tpj('#sliderlayer').revolution(
-                                            {
-                                                delay: 9000,
-                                                startheight: 480,
-                                                startwidth: 1170,
-
-
-                                                hideThumbs: 200,
-
-                                                thumbWidth: 100,
-                                                thumbHeight: 50,
-                                                thumbAmount: 5,
-
-                                                navigationType: "none",
-                                                navigationArrows: "verticalcentered",
-                                                navigationStyle: "round",
-
-                                                navOffsetHorizontal: 0,
-                                                navOffsetVertical: 20,
-
-                                                touchenabled: "on",
-                                                onHoverStop: "on",
-                                                shuffle: "off",
-                                                stopAtSlide: -1,
-                                                stopAfterLoops: -1,
-
-                                                hideCaptionAtLimit: 0,
-                                                hideAllCaptionAtLilmit: 0,
-                                                hideSliderAtLimit: 0,
-                                                fullWidth: "on",
-                                                shadow: 0
-
-
-
-                                            });
-
-
-
-
-
-                                    </script>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <section class="promotion " id="pavo-promotion">
@@ -949,173 +511,7 @@
                                     <div class="pav-col col-lg-12 col-md-12 col-sm-12 col-xs-12   ">
                                         <div class="col-inner" id="ContentCategory">
                                             <!--Tab con-->                                          
-                                        <%--    <div class="box pav-verticalcategorytabs clearfix box-blue">
-                                                <div class="box-wapper box-blue clearfix">
-                                                    <div class="tab-heading box-heading clearfix nopadding k-nomargin" id="Content_Category">
-                                                        <div class="nav-header navbar-brand">
-                                                         CategoryLevel2
-                                                        </div>
-                                                        <ul class="nav nav-pills k-right nopadding" id="pav-categorytabs">
-                                                           <li class="k-left"><a class="k-color-white" href="#tab312-cat74" role="tab" data-toggle="tab">Beauty</a></li>
-                                                        </ul>
-                                                        <!-- end div.tab-heading -->
-                                                    </div>
-                                                    <!--banertab-->
-                                                    <div class="tab-nav tabs-x tabs-left">
-                                                        <div class="banner-image hidden-md hidden-sm hidden-xs k-img-banner">
-                                                            <a class="img-banner" href="#" data-toggle="tab">
-                                                                <img class="img-responsive" src="../images/baner/banner1.jpg" alt="Sản phẩm mới" />
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <!--end baner tab-->
-                                                    <!--tab sản phẩm mới-->
-                                                    <div class="tab-content">
-                                                        <div class="tab-pane active " id="tab378-cat61">
-                                                            <!--control-->
-                                                            <div class="carousel-controls">
-                                                                <a class="carousel-control left" href="#list378-cat61" data-slide="prev">
-                                                                  <i class="fa fa-angle-left"></i>
-                                                                </a>
-                                                                <a class="carousel-control right" href="#list378-cat61" data-slide="next">
-                                                                    <i class="fa fa-angle-right"></i>
-                                                                </a>
-                                                            </div>
-                                                            <!--end control-->
-                                                            <!--product-->
-                                                            <div class="carousel-inner carousel378 slide" id="list378-cat61">
-                                                                <!--tab1- active-->
-                                                                <div class="item active">
-                                                                    <div class="row products-row last">
-                                                                        <!--product-->
-                                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col">
-                                                                            <div class="product-block item-default clearfix" itemtype="#" itemscope>
-
-
-                                                                                <span class="product-label ribbon label-special"><span class="product-label-special">Giảm giá</span></span>
-                                                                                <div class="images clearfix">
-                                                                                    <a class="img" itemprop="url" title="Furabitur sedg" href="#chitiet">
-                                                                                        <img class="img-responsive" itemprop="image" src="../images/Content_Product/Intro/dong_son_trang.jpg" title="sp1" alt="sp1" />
-                                                                                    </a>
-
-                                                                                    <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="/Introdetail.html" title="Xem nhanh">
-                                                                                        <i class="fa fa-eye"></i>
-                                                                                    </a>
-
-                                                                                    <a href="../images/Content_Product/Intro/dong_son_trang.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="Furabitur sedg">
-                                                                                       <i class="fa fa-search-plus"></i>
-                                                                                    </a>
-                                                                                </div>
-
-                                                                                <div class="product-meta">
-                                                                                    <div class="product-meta-inner">
-                                                                                        <div class="left">
-                                                                                            <div class="review clearfix">
-                                                                                                <h3 class="name" itemprop="name">
-                                                                                                    <a href="index5e3d.html?route=product/product&amp;product_id=136">Furabitur sedg</a>
-
-                                                                                                </h3>
-
-                                                                                                <div class="rating">
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                </div>
-                                                                                            </div>
-
-                                                                                            <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                                                <span class="price-new">$290,00</span>
-                                                                                                <span class="price-old">$300,00</span>
-
-                                                                                            </div>
-
-
-                                                                                            <div class="clearfix"></div>
-                                                                                            <p class="description" itemprop="description">	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high defi.....</p>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        
-
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                                <!--end tab1-->
-                                                                <div class="item ">
-                                                                    <div class="row products-row ">
-                                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col">
-                                                                            <div class="product-block item-default clearfix" itemtype="#" itemscope>
-
-
-                                                                                <span class="product-label ribbon label-special"><span class="product-label-special">Giảm giá</span></span>
-                                                                                <div class="images clearfix">
-                                                                                    <a class="img" itemprop="url" title="Furabitur sedg" href="#chitiet">
-                                                                                        <img class="img-responsive" itemprop="image" src="../images/Content_Product/Intro/dong_son_trang.jpg" title="sp1" alt="sp1" />
-                                                                                    </a>
-
-                                                                                    <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="/Introdetail.html" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                                                    <a href="../images/Content_Product/Intro/dong_son_trang.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="Furabitur sedg">
-                                                                                        <i class="fa fa-search-plus"></i>
-
-                                                                                    </a>
-                                                                                </div>
-
-                                                                                <div class="product-meta">
-                                                                                    <div class="product-meta-inner">
-                                                                                        <div class="left">
-                                                                                            <div class="review clearfix">
-                                                                                                <h3 class="name" itemprop="name"><a href="index5e3d.html?route=product/product&amp;product_id=136">Furabitur sedg</a></h3>
-
-                                                                                                <div class="rating">
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                                                </div>
-                                                                                            </div>
-
-                                                                                            <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                                                <span class="price-new">$290,00</span>
-                                                                                                <span class="price-old">$300,00</span>
-
-                                                                                            </div>
-
-
-                                                                                            <div class="clearfix"></div>
-                                                                                            <p class="description" itemprop="description">	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high defi.....</p>
-                                                                                        </div>
-
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div><!-- end div.carousel-content-->
-
-                                                        </div><!-- end div.tab-panel-->
-                                                       
-                                                    </div><!-- end div.tab-content -->
-
-                                                </div><!-- end div.box-wapper -->
-                                            </div>
-                                            <!-- end div.box -->
-                                            <script>
-                                                $(function () {
-                                                    $('.carousel378').carousel({ interval: 99999999999999, auto: false, pause: 'hover' });
-                                                    $('#pavo-categorytabs378 a:first').tab('show');
-                                                });
-                                            </script>--%>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -1136,100 +532,7 @@
                                                     <span>Đối tác</span>
                                                 </div>
                                                 <div class="box-content">
-                                                    <div class="carousel-inner">
-
-                                                        <div class="item active">
-                                                            <div class="row">
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/3-logo_brand-153x51.jpg" alt="Banner 1" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/4-logo_brand-153x51.jpg" alt="Banner 2" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/5-logo_brand-153x51.jpg" alt="Banner 3" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/6-logo_brand-153x51.jpg" alt="Banner 4" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/7-logo_brand-153x51.jpg" alt="Banner 5" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/8-logo_brand-153x51.jpg" alt="Banner 6" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="item ">
-                                                            <div class="row">
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/6-logo_brand-153x51.jpg" alt="Banner 7" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/4-logo_brand-153x51.jpg" alt="Banner 8" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/5-logo_brand-153x51.jpg" alt="Banner 9" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/3-logo_brand-153x51.jpg" alt="Banner 10" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/7-logo_brand-153x51.jpg" alt="Banne 11" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-2 col-xs-6 col-sm-2">
-                                                                    <div class="item-inner">
-                                                                        <a href="#"><img src="image/cache/catalog/carousel/6-logo_brand-153x51.jpg" alt="Banne 12" class="img-responsive" /></a>
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
+                                                    <div class="carousel-inner" id="sliderbot">                                                                                                       
                                                     </div>
                                                     <div class="carousel-controls">
                                                         <a class="carousel-control left" href="#pavcarousel6" data-slide="prev">
@@ -1241,10 +544,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <script type="text/javascript">
-<!--
-    $('#pavcarousel6').carousel({ interval: 3000 });
-                                                </script>
+                                             <script type="text/javascript">
+                                                 jQuery("#pavcarousel6").carousel({ interval: 3000 });
+                                             </script>
 
 
                                         </div>
@@ -1266,7 +568,7 @@
                                                 <div class="box-heading hidden">Newsletter</div>
                                                 <div class="box-content no-bg">
                                                     <div class=" pav-newsletter  clearfix" id="newsletter_1158092619">
-                                                        <form id="formNewLestter" method="post" action="http://dothotuongphat.com/index.php?route=module/pavnewsletter/subscribe" class="formNewLestter">
+                                                        <form id="formNewLestter" method="post" action="" class="formNewLestter">
                                                             <span class="pull-left"></span>
                                                             <div class="explain"><p><strong>ĐĂNG KÍ NHẬN  THÔNG TIN SẢN PHẨM  </strong></p></div>
                                                             <div class="clearfix input-group input-newsletter">
@@ -1287,10 +589,8 @@
 
 
 
-                                            <script type="text/javascript">
-
-
-                                                $(document).ready(function () {
+                                          <%--  <script type="text/javascript">
+                                              $(document).ready(function () {
                                                     var id = 'newsletter_1158092619';
                                                     $('#' + id + ' .box-heading').bind('click', function () {
                                                         $('#' + id).toggleClass('active');
@@ -1323,12 +623,11 @@
                                                         return false;
                                                     });
                                                 });
-
                                                 function isValidEmailAddress(emailAddress) {
                                                     var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
                                                     return pattern.test(emailAddress);
                                                 }
-                                                </script>
+                                                </script>--%>
                                         </div>
                                     </div>
                                 </div>
@@ -1352,24 +651,24 @@
                         <div class="inner">
                             <div class="row">
                                 <div class="col-md-3 col-sm-12">
-                                    <p><img src="css/image/logo.png" alt="logo"></p>
+                                    <p><img src="css/image/logo.png" alt="logo" ></p>
                                     <p><span>Hãy đến với chúng tôi nhông xích mạnh quang</span></p>
                                 </div>
                                 <div class="col-md-2 col-sm-4">
                                     <h5 class="box-heading"><span>Chăm sóc khách hàng</span></h5>
                                     <ul class="list-unstyled">
-                                        <li><a href="index2724.html?route=information/contact">Liên hệ</a></li>
-                                        <li><a href="index71ba.html?route=account/return/add">Trả hàng</a></li>
-                                        <li><a href="index7cb2.html?route=information/sitemap">Sơ đồ trang</a></li>
+                                        <li><a href="">Liên hệ</a></li>
+                                        <li><a href="">Trả hàng</a></li>
+                                        <li><a href="">Sơ đồ trang</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-2 col-sm-4">
                                     <h5 class="box-heading"><span>Chức năng khác</span></h5>
                                     <ul class="list-unstyled">
-                                        <li><a href="indexd773.html?route=product/manufacturer">Thương hiệu</a></li>
-                                        <li><a href="index4dd2.html?route=account/voucher">Phiếu quà tặng</a></li>
-                                        <li><a href="index3d18.html?route=affiliate/account">Cộng Tác Bán Hàng</a></li>
-                                        <li><a href="indexf110.html?route=product/special">Khuyến mãi</a></li>
+                                        <li><a href="">Thương hiệu</a></li>
+                                        <li><a href="">Phiếu quà tặng</a></li>
+                                        <li><a href="">Cộng Tác Bán Hàng</a></li>
+                                        <li><a href="">Khuyến mãi</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-2 col-sm-4">
@@ -1381,7 +680,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-sm-12">
-                                    <div class="box pav-custom  ">                                        <div class="box-heading">Mạnh Quang</div>                                        <div class="box-content">                                            <div class="address"><div class="box-addres"><div class="link-address icon"><span class="fa fa-map-marker">&nbsp;</span><span> &nbsp;Hà Nội, VN</span></div>                                                    <div class="link-mobile icon">                                                        <span class="fa fa-phone">&nbsp;</span><span>Phone: +84 0912456789</span></div>                                                    <div class="link-mail icon">                                                        <span class="fa fa-envelope">&nbsp;</span>                                                        <span>Email:Califaxit@gmail.com</span></div>                                                </div>                                            </div>                                        </div>                                    </div>
+                                    <div class="box pav-custom  "> <div class="box-heading">Mạnh Quang</div><div class="box-content">                                            <div class="address"><div class="box-addres"><div class="link-address icon"><span class="fa fa-map-marker">&nbsp;</span><span> &nbsp;Hà Nội, VN</span></div>                                                    <div class="link-mobile icon">                                                        <span class="fa fa-phone">&nbsp;</span><span>Phone: +84 0912456789</span></div>                                                    <div class="link-mail icon">                                                        <span class="fa fa-envelope">&nbsp;</span>                                                        <span>Email:Califaxit@gmail.com</span></div>                                                </div>                                            </div>                                        </div>                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1427,7 +726,7 @@
                                                         , marker: {
                                                             values: [
                                                                                                 {
-                                                                                                    latLng: [20.9590252, 105.8106859, 19.21],
+                                                                                                    latLng: [20.9590252, 105.8106859],
                                                                                                     options: {
                                                                                                         icon: "",
                                                                                                         //shadow: "icon-shadow.png",
@@ -1555,65 +854,65 @@
                 $('#myTab a:first').tab('show');
 
 
-                var $MAINCONTAINER = $("html");
+                //var $MAINCONTAINER = $("html");
 
                 /**
                  * BACKGROUND-IMAGE SELECTION
                  */
-                $(".background-images").each(function () {
-                    var $parent = this;
-                    var $input = $(".input-setting", $parent);
-                    $(".bi-wrapper > div", this).click(function () {
-                        $input.val($(this).data('val'));
-                        $('.bi-wrapper > div', $parent).removeClass('active');
-                        $(this).addClass('active');
+                //$(".background-images").each(function () {
+                //    var $parent = this;
+                //    var $input = $(".input-setting", $parent);
+                //    $(".bi-wrapper > div", this).click(function () {
+                //        $input.val($(this).data('val'));
+                //        $('.bi-wrapper > div', $parent).removeClass('active');
+                //        $(this).addClass('active');
 
-                        if ($input.data('selector')) {
-                            $($input.data('selector'), $($MAINCONTAINER)).css($input.data('attrs'), 'url(' + $(this).data('image') + ')');
-                        }
-                    });
-                });
+                //        if ($input.data('selector')) {
+                //            $($input.data('selector'), $($MAINCONTAINER)).css($input.data('attrs'), 'url(' + $(this).data('image') + ')');
+                //        }
+                //    });
+                //});
 
-                $(".clear-bg").click(function () {
-                    var $parent = $(this).parent();
-                    var $input = $(".input-setting", $parent);
-                    if ($input.val('')) {
-                        if ($parent.hasClass("background-images")) {
-                            $('.bi-wrapper > div', $parent).removeClass('active');
-                            $($input.data('selector'), $("#main-preview iframe").contents()).css($input.data('attrs'), 'none');
-                        } else {
-                            $input.attr('style', '')
-                        }
-                        $($input.data('selector'), $($MAINCONTAINER)).css($input.data('attrs'), 'inherit');
+                //$(".clear-bg").click(function () {
+                //    var $parent = $(this).parent();
+                //    var $input = $(".input-setting", $parent);
+                //    if ($input.val('')) {
+                //        if ($parent.hasClass("background-images")) {
+                //            $('.bi-wrapper > div', $parent).removeClass('active');
+                //            $($input.data('selector'), $("#main-preview iframe").contents()).css($input.data('attrs'), 'none');
+                //        } else {
+                //            $input.attr('style', '')
+                //        }
+                //        $($input.data('selector'), $($MAINCONTAINER)).css($input.data('attrs'), 'inherit');
 
-                    }
-                    $input.val('');
+                //    }
+                //    $input.val('');
 
-                    return false;
-                });
+                //    return false;
+                //});
 
 
 
-                $('.accordion-group input.input-setting').each(function () {
-                    var input = this;
-                    $(input).attr('readonly', 'readonly');
-                    $(input).ColorPicker({
-                        onChange: function (hsb, hex, rgb) {
-                            $(input).css('backgroundColor', '#' + hex);
-                            $(input).val(hex);
-                            if ($(input).data('selector')) {
-                                $($MAINCONTAINER).find($(input).data('selector')).css($(input).data('attrs'), "#" + $(input).val())
-                            }
-                        }
-                    });
-                });
-                $('.accordion-group select.input-setting').change(function () {
-                    var input = this;
-                    if ($(input).data('selector')) {
-                        var ex = $(input).data('attrs') == 'font-size' ? 'px' : "";
-                        $($MAINCONTAINER).find($(input).data('selector')).css($(input).data('attrs'), $(input).val() + ex);
-                    }
-                });
+                //$('.accordion-group input.input-setting').each(function () {
+                //    var input = this;
+                //    $(input).attr('readonly', 'readonly');
+                //    $(input).ColorPicker({
+                //        onChange: function (hsb, hex, rgb) {
+                //            $(input).css('backgroundColor', '#' + hex);
+                //            $(input).val(hex);
+                //            if ($(input).data('selector')) {
+                //                $($MAINCONTAINER).find($(input).data('selector')).css($(input).data('attrs'), "#" + $(input).val())
+                //            }
+                //        }
+                //    });
+                //});
+                //$('.accordion-group select.input-setting').change(function () {
+                //    var input = this;
+                //    if ($(input).data('selector')) {
+                //        var ex = $(input).data('attrs') == 'font-size' ? 'px' : "";
+                //        $($MAINCONTAINER).find($(input).data('selector')).css($(input).data('attrs'), $(input).val() + ex);
+                //    }
+                //});
 
 
             </script>
@@ -1660,4 +959,21 @@
         <!--end slider bot-->
     </div>
 </body>
+   <%--  <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Framework.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script>  
+     <script type="text/javascript">
+         // khởi tạo ngôn ngữ mặc định
+         Init_System_WEB();
+
+         window.onload = function () {
+
+             Load_MenuTopVer("#verticalmenu");
+             Load_MenuTopHoz("#bs-megamenu");
+             loadsliderTop("#pavo-slideshow");
+             LoadCateGoryLevel2("#ContentCategory");
+             loadsliderBot("#sliderbot");
+
+         };
+          </script>--%>
 </html>
