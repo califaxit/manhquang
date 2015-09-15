@@ -8,36 +8,6 @@
     <title>Manh quang</title>
     <link href="images/favicon.ico" rel="icon" />
     <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
-    <%--<link href="css/stylesheet/bootstrap.css" rel="stylesheet" />
-    <link href="css/stylesheet/stylesheet.css" rel="stylesheet" />
-    <link href="css/stylesheet/font.css" rel="stylesheet" />
-    <link href="css/stylesheet/paneltool.css" rel="stylesheet" />
-    <link href="JS/Script/jquery/colorpicker/css/colorpicker.css" rel="stylesheet" />
-    <link href="JS/Script/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="JS/Script/jquery/magnific/magnific-popup.css" rel="stylesheet" />
-    <link href="css/stylesheet/homebuilder.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavproducttabs.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavverticalcategorytabs.css" rel="stylesheet" />
-    <link href="css/stylesheet/bootstrap-tabs-x.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavcarousel.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavnewsletter.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavmap.css" rel="stylesheet" />
-    <link href="css/stylesheet/pavreassurance.css" rel="stylesheet" />
-    <link href="css/stylesheet/sliderlayer/css/typo.css" rel="stylesheet" />
-    <script src="JS/Script/jquery/jquery-2.1.1.min.js"></script>
-    <script src="JS/Script/jquery/magnific/jquery.magnific-popup.min.js"></script>
-    <script src="JS/Script/bootstrap/js/bootstrap.min.js"></script>
-    <script src="JS/Script/common.js"></script>
-    <script src="css/javascript/common.js"></script>
-    <script src="JS/Script/jquery/colorpicker/js/colorpicker.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;language=en"></script>
-    <script src="JS/Script/gmap/gmap3.min.js"></script>
-    <script src="JS/Script/gmap/gmap3.infobox.js"></script>
-    <script src="JS/Script/layerslider/jquery.themepunch.plugins.min.js"></script>
-    <script src="JS/Script/layerslider/jquery.themepunch.revolution.min.js"></script>
-    <script src="JS/Common/jquery-jtemplates.js"></script>
-    <script src="JS/FRAMEWORK/SystemConfig.js"></script>--%>
-
 </head>
 <body class="main-menu-fixed common-home page-home layout-fullwidth">
     <div class="row-offcanvas row-offcanvas-left">
@@ -525,8 +495,7 @@
                     </ul>
                     <div class="row">
                         <aside id="sidebar-left" class="col-md-3">
-                            <column id="column-left" class="hidden-xs sidebar">
-    
+                            <column id="column-left" class="hidden-xs sidebar">    
 <div class="category box box-highlights theme">
     <div class="box-heading"><span>Danh Mục</span></div>
     <div class="box-content tree-menu">
@@ -565,7 +534,6 @@
                                         <img src="#" alt="ảnh category" title="Nhông" class="img-responsive" />
                                     </div>
                                     <div class="category-description">
-                                                                                  
                                     </div>
                                 </div>
 
@@ -582,8 +550,8 @@
                                             </div>
                                         </div>
                                         <div class="filter-right">
-                                            <div class="product-compare pull-right"><a href="index6431.html?route=product/compare" class="btn btn-default" id="compare-total">So sánh sản phẩm (0)</a></div>
-                                            <div class="sort pull-right">
+                                            <%--<div class="product-compare pull-right"><a href="index6431.html?route=product/compare" class="btn btn-default" id="compare-total">So sánh sản phẩm (0)</a></div>--%>
+                                            <%--<div class="sort pull-right">
                                                 <span for="input-sort">Sắp xếp theo:</span>
                                                 <select id="input-sort" class="form-control" onchange="location = this.value;">
                                                     <option value="http://dothotuongphat.com/noi-that-phong-tho-tu-gia?sort=p.sort_order&amp;order=ASC" selected="selected">Mặc định</option>
@@ -596,9 +564,9 @@
                                                     <option value="noi-that-phong-tho-tu-gia950c.html?sort=p.model&amp;order=ASC">Kiểu (A - Z)</option>
                                                     <option value="noi-that-phong-tho-tu-gia942a.html?sort=p.model&amp;order=DESC">Kiểu (Z - A)</option>
                                                 </select>
-                                            </div>
+                                            </div>--%>
 
-                                            <div class="limit pull-right">
+                                            <%--<div class="limit pull-right">
                                                 <span for="input-limit">Hiển thị:</span>
                                                 <select id="input-limit" class="form-control" onchange="location = this.value;">
                                                     <option value="http://dothotuongphat.com/noi-that-phong-tho-tu-gia?limit=15" selected="selected">15</option>
@@ -607,7 +575,7 @@
                                                     <option value="noi-that-phong-tho-tu-gia8538.html?limit=75">75</option>
                                                     <option value="noi-that-phong-tho-tu-giaa03f.html?limit=100">100</option>
                                                 </select>
-                                            </div>
+                                            </div>--%>
                                         </div>
 
                                     </div>
@@ -617,6 +585,42 @@
                                 <div id="products" class="product-grid">
                                     <div class="products-block">
                                         <div class="row products-row">
+                                            <%--đang bóc tách--%>
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
+                                                    <div class="images clearfix">
+                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
+                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
+                                                        </a>
+                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh">
+                                                            <i class="fa fa-eye"></i>
+                                                        </a>
+                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i">
+                                                        <i class="fa fa-search-plus"></i>
+                                                       </a>
+                                                    </div>
+                                                    <div class="product-meta">
+                                                        <div class="product-meta-inner">
+                                                            <div class="left">
+                                                                <div class="review clearfix">
+                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
+                                                                </div>
+                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
+                                                                    <span class="special-price">12.900.000 VNĐ</span>
+                                                                    <meta content="12.900" itemprop="price">
+                                                                    <meta content="" itemprop="priceCurrency">
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
+                                                            </div>
+                                                            <div class="right">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <%--kết thúc bóc tách--%>
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
@@ -657,16 +661,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -706,65 +707,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
                                         </div>
-
                                         <div class="row products-row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
@@ -806,16 +755,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -855,16 +801,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -904,16 +847,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
                                         </div>
-
                                         <div class="row products-row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
@@ -955,16 +895,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1004,16 +941,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1053,16 +987,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
                                         </div>
-
                                         <div class="row products-row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
@@ -1104,16 +1035,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1153,16 +1081,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1202,16 +1127,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
                                         </div>
-
                                         <div class="row products-row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
@@ -1253,16 +1175,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1302,16 +1221,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
-
-                                              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
 
 
@@ -1351,16 +1267,13 @@
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
                                                             <div class="right">
-                                                                
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
-
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="paginations paging clearfix">
@@ -1389,7 +1302,8 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-12">
                                     <p>
-                                        <img src="css/image/logo.png" alt="logo"></p>
+                                        <img src="css/image/logo.png" alt="logo">
+                                    </p>
                                     <p><span>Hãy đến với chúng tôi nhông xích mạnh quang</span></p>
                                 </div>
                                 <div class="col-md-2 col-sm-4">
@@ -1479,20 +1393,20 @@
                                                         , marker: {
                                                             values: [
                                                                                                 {
-                                                                                                    latLng: [21.066628841454087, 105.71351500138849],
+                                                                                                    latLng: [20.9963266, 105.8358646],
                                                                                                     options: {
                                                                                                         icon: "",
                                                                                                         //shadow: "icon-shadow.png",
                                                                                                     },
-                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="http://dothotuongphat.com/image/cache/catalog/dothotuongphat-icon-120x160.png" alt=""><div class="map-item-info"><div class="title">' + "Siêu thị đồ thờ tượng phật" + '</div><div class="address">' + "Quốc lộ 32, Trạm Trôi, Hoài Đức, Hà Nội, Việt Nam" + '</div><div class="description">' + "Khu đô thị Tân Tây Đô,  Hà Nội, VN" + '</div><a href="' + "#" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
+                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="http://manhquang.com/image/page1/logo-header.png" alt=""><div class="map-item-info"><div class="title">' + "Mạnh Quang" + '</div><div class="address">' + "Đường Kim Giang, Thanh Liệt, Thanh Trì, Hà Nội " + '</div><div class="description">' + "Đường Kim Giang, Thanh Liệt, Thanh Trì, Hà Nội " + '</div><a href="' + "#" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
                                                                                                 },
                                                                                                 {
-                                                                                                    latLng: [21.06867574878018, 105.71244416912532],
+                                                                                                    latLng: [20.9963266, 105.8358646],
                                                                                                     options: {
-                                                                                                        icon: "http://dothotuongphat.com/image/cache/data/pavmap/icons/default-49x56.png",
+                                                                                                        icon: "http://manhquang.com/image/page1/logo-header.png",
                                                                                                         //shadow: "icon-shadow.png",
                                                                                                     },
-                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="http://dothotuongphat.com/image/cache/data/pavmap/address/1-120x160.jpg" alt=""><div class="map-item-info"><div class="title">' + "Đồ thờ tượng phật" + '</div><div class="address">' + "Quốc lộ 32, Trạm Trôi, Hoài Đức, Hà Nội, Việt Nam" + '</div><div class="description">' + "Khu đô thị Tân Tây Đô,  Hà Nội, VN" + '</div><a href="' + "https://www.google.com/maps/place/Chung+c%C6%B0+T%C3%A2n+T%C3%A2y+%C4%90%C3%B4/@21.074348,105.701588,17z/data=!3m1!4b1!4m7!1m4!3m3!1s0x313455ce1f4315c3:0xe37771ad4d362bc7!2zQ2h1bmcgY8awIFTDom4gVMOieSDEkMO0!3b1!3m1!1s0x313455ce1f4315c3:0xe37771ad4d362bc7" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
+                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="http://manhquang.com/image/page1/logo-header.png" alt=""><div class="map-item-info"><div class="title">' + "Mạnh Quang" + '</div><div class="address">' + "Đường Kim Giang, Thanh Liệt, Thanh Trì, Hà Nội " + '</div><div class="description">' + "Đường Kim Giang, Thanh Liệt, Thanh Trì, Hà Nội " + '</div><a href="' + "https://www.google.com/maps/place/C%C3%B4ng+Ty+Tnhh+Sx+Ph%E1%BB%A5+T%C3%B9ng+Xe+M%C3%A1y+M%E1%BA%A1nh+Quang/@20.9963266,105.8358646,14z/data=!4m5!1m2!2m1!1scong+ty+tnhh+manh+quang+kim+giang!3m1!1s0x3135acf1a3d19795:0xec8fe39130743001" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
                                                                                                 },
                                                             ],
                                                             options: {
