@@ -19,115 +19,7 @@ var ContentsBO = {
         });
         return ret;
     },
-    UpdateCountView: function (CodeContents)
-    {
-        $.ajax({
-            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=UpdateViewCount&CodeContents=" + CodeContents,
-            type: "POST",
-            dataType: "json",
-            data:"",
-
-            success: function (data) {
-            },
-            error: function (ex) {
-            }
-        });
-    },
-
-    Ins: function ()
-    {
-        EnableLoading();
-        $.ajax({
-            url: "/Action/ProcessBackendAction.ashx?ActionObject=Contents&action=Ins",
-            type: "POST",
-            dataType: "json",
-            data: $("#frmIns_Contents").serialize(),
-
-            success: function (data) {
-                if (data.status == "success") {
-                    DisableLoading();
-                    alert("Thêm Contents thành công.");
-                }
-                else if (data.status != "success") {
-                    DisableLoading();
-
-                    alert("Thêm Contents lỗi: <font style='font-size:9px'>" + data.message + "</font>");
-
-                }
-            },
-            error: function (ex) {
-            }
-        });
-    },
-
-    Upd: function (IDContents)
-    {
-        $.ajax({
-            url: "/Action/ProcessBackendAction.ashx?ActionObject=Contents&action=Upd&IDContents=" + IDContents,
-            type: "POST",
-            dataType: "json",
-            data: $("#frmUpd_Contents").serialize(),
-            success: function (data) {
-                if (data.status == "success") {
-                   // $(".flexgripContents").flexReload();
-                   alert("Update Contents thành công.");
-
-                }
-                else if (data.status != "success") {
-                   alert("Update Contents lỗi: <font style='font-size:9px'>" + data.message + "</font>");
-
-                }
-            },
-            error: function (ex) {
-            }
-        });
-    },
-
-    Del: function (IDContents)
-    {
-        $.ajax({
-            url: "/Action/ProcessBackendAction.ashx?ActionObject=Contents&action=Del&IDContents=" + IDContents,
-            type: "POST",
-            dataType: "json",
-            data: $("#frmUpd_Contents").serialize(),
-            success: function (data) {
-                if (data.status == "success") {
-                    $(".flexgripContents").flexReload();
-                    showMessageBox("Delete thành công.");
-
-                }
-                else if (data.status != "success") {
-                    showMessageBox("Delete lỗi: <font style='font-size:9px'>" + data.message + "</font>");
-
-                }
-            },
-            error: function (ex) {
-            }
-        });
-    },
-    Del_ByCode: function (Key) {
-        $.ajax({
-            url: "/Action/ProcessBackendAction.ashx?ActionObject=Files&action=Del_ByCode&Code=" + Key,
-            type: "POST",
-            dataType: "json",
-            data: $("#frmUpd_Contents").serialize(),
-            success: function (data) {
-                if (data.status == "success") {
-                    //$(".flexgripContents").flexReload();
-                    showMessageBox("Delete thành công.");
-
-                }
-                else if (data.status != "success") {
-                    showMessageBox("Delete lỗi: <font style='font-size:9px'>" + data.message + "</font>");
-
-                }
-            },
-            error: function (ex) {
-            }
-        });
-    },
-
-    //#############################################################################
+   //#############################################################################
     // NgocBM
     Sel_Ext_ByKeyCodeContent_ByIDLang: function (KeyCodeContent, TitleLenght, IntroLenght, Limit, Order, IsDesc, IDLang) {
         if ((typeof (IDLang) == 'undefined') || (IDLang == '')) {
@@ -227,13 +119,13 @@ var ContentsBO = {
     });
     return ret;
     },
-    Sel_Ext_ByCodeCategoryLevel1: function (CodeCategoryLevel1,IDLang, TitleLenght, IntroLenght, Limit, Order, IsDesc) {
+    Sel_Ext_ByCodeCategoryLevel1: function (CodeCategoryLevel1,IDLang,Limit, IsDesc, TitleLenght, IntroLenght,Order) {
         if ((typeof (IDLang) == 'undefined') || (IDLang == '')) {
             IDLang = sys_CUR_LANG;
         }
         var ret;
         jQuery.ajax({
-            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=Sel_Ext_ByCodeCategoryLevel1&CodeCategoryLevel1=" + CodeCategoryLevel1 + "&Type=NormalContents&TitleLenght=" + TitleLenght + "&IntroLenght=" + IntroLenght + "&Limit=" + Limit + "&IsDesc=" + IsDesc + "&Order=" + Order + "&IDLang=" + IDLang,
+            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=Sel_Ext_ByCodeCategoryLevel1&CodeCategoryLevel1=" + CodeCategoryLevel1 + "&TitleLenght=" + TitleLenght + "&IntroLenght=" + IntroLenght + "&Limit=" + Limit + "&IsDesc=" + IsDesc + "&Order=" + Order + "&IDLang=" + IDLang,
             type: "POST",
             dataType: "json",
             data: "",
@@ -247,21 +139,19 @@ var ContentsBO = {
         });
         return ret;
     },
-    //############################################################################################################################
-    //############################################################################################################################
-    //QuyDQ
-    Sel_ByIDLang: function ()
-    { 
+    Sel_ByIDLang: function (IDLang)
+    {
+        if ((typeof (IDLang) == 'undefined') || (IDLang == '')) {
+            IDLang = sys_CUR_LANG;
+        }
         var ret;
-       
         jQuery.ajax({
-            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=Sel_ByIDLang&IDLang=" + sys_CUR_LANG, //"&TitleLenght=" + TitleLenght + "&IntroLenght=" + IntroLenght + "&Limit=" + Limit + "&IsDesc=" + IsDesc + "&Order=" + Order,
+            url: "/Action/ProcessFrontendAction.ashx?ActionObject=Contents&action=Sel_ByIDLang&IDLang=" + IDLang,
             type: "POST",
             dataType: "json",
             data: "",
             success: function (data, dataStatus) {
                 ret = data;
-                alert(JSON.stringify(data));
             },
             timeout: 30000,
             async: false,
@@ -269,7 +159,7 @@ var ContentsBO = {
             }
         });
         return ret;
-
-   }
+    }
+    //############################################################################################################################
    
 }
