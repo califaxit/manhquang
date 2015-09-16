@@ -68,21 +68,26 @@ function Load_MenuTopHoz(div)
     htmlhoz += "		                                        <div class='dropdown-menu'>";
     htmlhoz += "		                                        <div class='dropdown-menu-inner'>";
     htmlhoz += "		                                            <div class='row'>";
-    htmlhoz += "		                                                 {#foreach $T.data as record}{#param name=x value=$T.record.Code}";
-    htmlhoz += "		                                                <div class='mega-col col-xs-12 col-sm-12 col-md-3 ' onmousemove=\" LoadSubMenuTopHoz({$P.x},'#hoz{$P.x}')\">";
-    htmlhoz += "		                                                    <div class='mega-col-inner'>";
-    htmlhoz += "		                                                        <div class='pavo-widget' id='pavowid-26'>";
-    htmlhoz += "		                                                            <div class='pavo-widget' id='pavowid-735143602'>";
-    htmlhoz += "		                                                                <h4 class='widget-heading title'>{$T.record.CategoryNameLevel2}</h4>";
-    htmlhoz += "		                                                                <div class=''>";
-    htmlhoz += "		                                                                    <ul class='content' id='hoz{$T.record.Code}'}'>";
-    htmlhoz += "		                                                                    </ul>";
-    htmlhoz += "		                                                                </div>";
-    htmlhoz += "		                                                            </div>";
-    htmlhoz += "		                                                        </div>";
-    htmlhoz += "		                                                    </div>";
-    htmlhoz += "		                                            </div>";
-    htmlhoz += "		                                             {#/for}";
+    //htmlhoz += "		                                                 {#foreach $T.data as record}{#param name=x value=$T.record.Code}";
+    for (var i = 0; i < datacategory2.data.length; i++) {
+
+
+        htmlhoz += "		                                                <div class='mega-col col-xs-12 col-sm-12 col-md-3 ' onmousemove1=\" LoadSubMenuTopHoz({$P.x},'#hoz{$P.x}')\">";
+        htmlhoz += "		                                                    <div class='mega-col-inner'>";
+        htmlhoz += "		                                                        <div class='pavo-widget' id='pavowid-26'>";
+        htmlhoz += "		                                                            <div class='pavo-widget' id='pavowid-735143602'>";
+        htmlhoz += "		                                                                <h4 class='widget-heading title'>"+datacategory2.data[i].CategoryNameLevel2+"</h4>";
+        htmlhoz += "		                                                                <div class=''>";
+        htmlhoz += "		                                                                    <ul class='content'>";
+        htmlhoz += LoadSubMenuTopHoz(datacategory2.data[i].Code);
+        htmlhoz += "		                                                                    </ul>";
+        htmlhoz += "		                                                                </div>";
+        htmlhoz += "		                                                            </div>";
+        htmlhoz += "		                                                        </div>";
+        htmlhoz += "		                                                    </div>";
+        htmlhoz += "		                                                 </div>";
+        //htmlhoz += "		                                             {#/for}";
+    }
     htmlhoz += "		                                            </div>";
     htmlhoz += "		                                        </div>";
     htmlhoz += "		                                    </div>";
@@ -95,23 +100,28 @@ function Load_MenuTopHoz(div)
    // jQuery(div).setParam("hoz", LoadSubMenuTopHoz);
     jQuery(div).processTemplate(datacategory2);
 }
+//menu ngang top QuyDQ
  function LoadSubMenuTopHoz(CodeCateGoryLevel2,div)
 {
      var data = CategoryLevel1BO.Sel_Ext_ByCodeCategoryLevel2_ByIDLang(CodeCateGoryLevel2);
      var html = "";
-        html += " {#foreach $T.data as record}";  
+     //html += " {#foreach $T.data as record}"; 
+     for (var i = 0; i < data.data.length; i++) {
+
+    
         html += "		 <li>";
-        html+= "		    <a href='#'>";
-        html += "		          <span>{$T.record.CategoryLevel1_CategoryNameLevel1}{$T.record.CategoryLevel1_ID}</span>";
+        html += "		    <a href='/product.aspx?Code=" + data.data[i].CategoryLevel1_Code + "'>";
+        html += "		          <span>"+data.data[i].CategoryLevel1_CategoryNameLevel1+"</span>";
         html += "		     </a>";
         html += "		 </li>";
-        html += " {#/for} ";
-   
-    
-     jQuery(div).setTemplate(html);
+         //html += " {#/for} ";
+     }
+     return html;
+    // jQuery(div).html(html);
+     //jQuery(div).setTemplate(html);
 
-     jQuery(div).processTemplate(data);
-     return true;
+     //jQuery(div).processTemplate(data);
+    // return true;
 
  }
  function LoadSubMenuTopVer(CodeCateGoryLevel2,div)
