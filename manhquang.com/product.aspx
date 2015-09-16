@@ -8,6 +8,10 @@
     <title>Manh quang</title>
     <link href="images/favicon.ico" rel="icon" />
     <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Framework.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Library.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script> 
+
 </head>
 <body class="main-menu-fixed common-home page-home layout-fullwidth">
     <div class="row-offcanvas row-offcanvas-left">
@@ -483,9 +487,6 @@
                 </div>
             </div>
             <!-- /sys-notification -->
-
-
-
             <div id="columns">
                 <div class="container">
 
@@ -582,175 +583,30 @@
                                 </div>
 
 
-                                <div id="products" class="product-grid">
-                                    <div class="products-block">
-                                        <div class="row products-row">
-                                            <%--đang bóc tách--%>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i">
-                                                        <i class="fa fa-search-plus"></i>
-                                                       </a>
-                                                    </div>
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-                                                                </div>
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <%--kết thúc bóc tách--%>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
+                                <div  class="product-grid" id="listproduct">
+                                    <%--<div class="products-block" id="products">                                       
                                         <div class="row products-row">
                                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
                                                 <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
                                                     <div class="images clearfix">
                                                         <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
+                                                            <img class="img-responsive" itemprop="image" src="#" title="123" alt="1234" />
                                                         </a>
-
                                                         <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
+                                                        <a href="#" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i"class="fa fa-search-plus"></i></a>
                                                     </div>
-
                                                     <div class="product-meta">
                                                         <div class="product-meta-inner">
                                                             <div class="left">
                                                                 <div class="review clearfix">
                                                                     <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
+                                                                   
                                                                 </div>
-
                                                                 <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
                                                                     <span class="special-price">12.900.000 VNĐ</span>
                                                                     <meta content="12.900" itemprop="price">
-
                                                                     <meta content="" itemprop="priceCurrency">
                                                                 </div>
-
                                                                 <div class="clearfix"></div>
                                                                 <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
                                                             </div>
@@ -759,532 +615,23 @@
                                                         </div>
                                                     </div>
                                                 </div>
-
                                             </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                            
+                                            
                                         </div>
-                                        <div class="row products-row">
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row products-row">
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row products-row">
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 product-col col-fullwidth">
-                                                <div class="product-block item-default clearfix" itemtype="http://schema.org/Product" itemscope>
-
-
-                                                    <div class="images clearfix">
-                                                        <a class="img" itemprop="url" title="1234" href="Detail.aspx">
-                                                            <img class="img-responsive" itemprop="image" src="images/Content_Product/Detail/dong_son_trang-200x200.jpg" title="123" alt="1234" />
-                                                        </a>
-
-                                                        <a class="pav-colorbox btn btn-inverse iframe-link" data-toggle="tooltip" href="#" title="Xem nhanh"><i class="fa fa-eye"></i></a>
-
-                                                        <a href="images/Content_Product/Detail/dong_son_trang-200x200.jpg" class="btn btn-inverse colorbox product-zoom cboxElement" title="123i" class="fa fa-search-plus"></i></a>
-                                                    </div>
-
-                                                    <div class="product-meta">
-                                                        <div class="product-meta-inner">
-                                                            <div class="left">
-                                                                <div class="review clearfix">
-                                                                    <h3 class="name" itemprop="name"><a href="noi-that-phong-tho-tu-gia/an-gian.html">Án gian</a></h3>
-
-                                                                    <div class="rating">
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="price clearfix" itemtype="http://schema.org/Offer" itemscope itemprop="offers">
-                                                                    <span class="special-price">12.900.000 VNĐ</span>
-                                                                    <meta content="12.900" itemprop="price">
-
-                                                                    <meta content="" itemprop="priceCurrency">
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                                <p class="description" itemprop="description">Nội dung đang được cập nhật.........</p>
-                                                            </div>
-                                                            <div class="right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
+                                        
+                                    </div>--%>
                                 </div>
-                                <div class="paginations paging clearfix">
-                                    <ul class="pagination">
+                                
+                                <div class="paginations paging clearfix" id="pagging1">
+                                    <%--<ul class="pagination">
                                         <li class="active"><span>1</span></li>
                                         <li><a href="noi-that-phong-tho-tu-gia4658.html?page=2">2</a></li>
                                         <li><a href="noi-that-phong-tho-tu-gia9ba9.html?page=3">3</a></li>
                                         <li><a href="noi-that-phong-tho-tu-gia4658.html?page=2">&gt;</a></li>
                                         <li><a href="noi-that-phong-tho-tu-gia9ba9.html?page=3">&gt;|</a></li>
                                     </ul>
-                                    <div class="results">Hiển thị từ 1 đến 15 của 34 (3 Trang)</div>
+                                    <div class="results">Hiển thị từ 1 đến 15 của 34 (3 Trang)</div>--%>
                                 </div>
                             </div>
                         </section>
@@ -1616,6 +963,9 @@
                             $('.collapse').on('hide.bs.collapse', function () {
                                 $('span[data-target=#' + $(this).attr('id') + ']').html("+");
                             });
+                            ///pageging
+                            load_content("#listproduct", GetURLParameter('Code'));
+                            Paging("#pagging1", "#products",2);
                         });
                     </script>
 
