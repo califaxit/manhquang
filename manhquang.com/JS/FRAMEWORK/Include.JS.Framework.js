@@ -12,6 +12,8 @@ document.write('<script src="JS/FRAMEWORK/BussinessLogic/AlbumsBO.js"></script>'
 document.write('<script src="JS/FRAMEWORK/BussinessLogic/ContentsBO.js"></script>');
 /////////////////////////////////////////////////////////////////////////
 document.write('<script src="JS/ForEachPage/Process_Default.js"></script>');
+//////////////// product
+document.write('<script src="JS/ForEachPage/Process_Content_Product.js"></script>');
 
 
 
