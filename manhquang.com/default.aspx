@@ -8,8 +8,9 @@
     <title>Mạnh Quang</title>
     <link href="images/favicon.ico" rel="icon" />  
     <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
+    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script> 
     <script src="JS/FRAMEWORK/Include.JS.Framework.js"></script>
-    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script>   
+    
      <script type="text/javascript">
          // khởi tạo ngôn ngữ mặc định
          Init_System_WEB();
@@ -564,31 +565,6 @@
                                 <div class="row-inner  clearfix">
                                     <div class="pav-col col-lg-12 col-md-12 col-sm-12 col-xs-12   ">
                                         <div class="col-inner">
-                                            <div class="box">
-                                                <div class="box-heading hidden">Newsletter</div>
-                                                <div class="box-content no-bg">
-                                                    <div class=" pav-newsletter  clearfix" id="newsletter_1158092619">
-                                                        <form id="formNewLestter" method="post" action="" class="formNewLestter">
-                                                            <span class="pull-left"></span>
-                                                            <div class="explain"><p><strong>ĐĂNG KÍ NHẬN  THÔNG TIN SẢN PHẨM  </strong></p></div>
-                                                            <div class="clearfix input-group input-newsletter">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control email input-inverse input-lg inputNew" onblur="javascript:if(this.value=='')this.value='Your email address';" onfocus="javascript:if(this.value=='Your email address')this.value='';" value="Your email address" size="18" name="email">
-                                                                    <span class="input-group-btn">
-                                                                        <button type="submit" name="submitNewsletter" class="btn btn-newsletter">Subscribe</button>
-                                                                    </span>
-                                                                </div>
-                                                                <input type="hidden" value="1" name="action">
-                                                                <div class="valid"></div>
-                                                            </div>
-                                                        </form>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
                                           <%--  <script type="text/javascript">
                                               $(document).ready(function () {
                                                     var id = 'newsletter_1158092619';
@@ -652,35 +628,31 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-12">
                                     <p><img src="css/image/logo.png" alt="logo" ></p>
-                                    <p><span>Hãy đến với chúng tôi nhông xích mạnh quang</span></p>
+                                    <p><span></span></p>
                                 </div>
-                                <div class="col-md-2 col-sm-4">
-                                    <h5 class="box-heading"><span>Chăm sóc khách hàng</span></h5>
+                                <div class="col-md-3 col-sm-6">
+                                    <h5 class="box-heading"><span>Danh mục</span></h5>
                                     <ul class="list-unstyled">
+                                        <li><a href="">sản phẩm</a></li>
+                                        <li><a href="">Giới thiệu</a></li>
                                         <li><a href="">Liên hệ</a></li>
-                                        <li><a href="">Trả hàng</a></li>
-                                        <li><a href="">Sơ đồ trang</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-2 col-sm-4">
+                                <div class="col-md-3 col-sm-6">
                                     <h5 class="box-heading"><span>Chức năng khác</span></h5>
                                     <ul class="list-unstyled">
                                         <li><a href="">Thương hiệu</a></li>
                                         <li><a href="">Phiếu quà tặng</a></li>
-                                        <li><a href="">Cộng Tác Bán Hàng</a></li>
-                                        <li><a href="">Khuyến mãi</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-2 col-sm-4">
-                                    <h5 class="box-heading"><span>Đơn hàng</span></h5>
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Lịch sử đơn hàng</a></li>
-                                        <li><a href="#">Danh sách yêu thích</a></li>
-                                        <li><a href="#">Thư thông báo</a></li>
+                                       
                                     </ul>
                                 </div>
                                 <div class="col-md-3 col-sm-12">
-                                    <div class="box pav-custom  "> <div class="box-heading">Mạnh Quang</div><div class="box-content">                                            <div class="address"><div class="box-addres"><div class="link-address icon"><span class="fa fa-map-marker">&nbsp;</span><span> &nbsp;Hà Nội, VN</span></div>                                                    <div class="link-mobile icon">                                                        <span class="fa fa-phone">&nbsp;</span><span>Phone: +84 0912456789</span></div>                                                    <div class="link-mail icon">                                                        <span class="fa fa-envelope">&nbsp;</span>                                                        <span>Email:Califaxit@gmail.com</span></div>                                                </div>                                            </div>                                        </div>                                    </div>
+                                    <div class="box pav-custom  ">
+                                        <div class="box-heading">Công Ty TNHH Mạnh Quang</div><div class="box-content">
+                                            <div class="address"><div class="box-addres">
+                                            <div class="link-address icon"><span class="fa fa-map-marker">&nbsp;</span><span>Thanh liệt ,Thanh Trì ,Hà Nội</span></div>
+                                            <div class="link-mobile icon"><span class="fa fa-phone">&nbsp;</span><span>Phone: +84.4 36883376</span></div>
+                                            <div class="link-mail icon"><span class="fa fa-envelope"></span><span style="font-size:12px;">Email:manhquangmq@manhquang.com </span></div>                                                </div>                                            </div>                                        </div>                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -726,20 +698,21 @@
                                                         , marker: {
                                                             values: [
                                                                                                 {
-                                                                                                    latLng: [20.9590252, 105.8106859],
+                                                                                                    latLng: [20.9963266,105.8358646],
                                                                                                     options: {
                                                                                                         icon: "",
+                                                                                                        zoom:5
                                                                                                         //shadow: "icon-shadow.png",
                                                                                                     },
-                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="" alt=""><div class="map-item-info"><div class="title">' + "" + '</div><div class="address">' + "" + '</div><div class="description">' + "" + '</div><a href="' + "#" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
+                                                                                                    //data: '<div class="marker-holder"><div class="marker-content with-image"><img src="" alt=""><div class="map-item-info"><div class="title">' + "" + '</div><div class="address">' + "" + '</div><div class="description">' + "" + '</div><a href="' + "#" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
                                                                                                 },
                                                                                                 {
-                                                                                                    latLng: [20.9590252, 105.8106859, 19.21],
+                                                                                                    latLng: [20.9963266,105.8358646],
                                                                                                     options: {
                                                                                                         icon: "",
                                                                                                         //shadow: "icon-shadow.png",
                                                                                                     },
-                                                                                                    data: '<div class="marker-holder"><div class="marker-content with-image"><img src="" alt=""><div class="map-item-info"><div class="title">' + "Đồ thờ tượng phật" + '</div><div class="address">' + "Quốc lộ 32, Trạm Trôi, Hoài Đức, Hà Nội, Việt Nam" + '</div><div class="description">' + "Khu đô thị Tân Tây Đô,  Hà Nội, VN" + '</div><a href="' + "https://www.google.com/maps/place/Nh%C3%A0+m%C3%A1y+Nh%C3%B4ng+x%C3%ADch+M%E1%BA%A1nh+Quang/@20.9908108,105.8278079,13z/data=!4m6!1m3!3m2!1s0x0000000000000000:0x7f06c8cb2ed4ae46!2zTmjDoCBtw6F5IE5ow7RuZyB4w61jaCBN4bqhbmggUXVhbmc!3m1!1s0x0000000000000000:0x7f06c8cb2ed4ae46" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
+                                                                                                    //data: '<div class="marker-holder"><div class="marker-content with-image"><img src="" alt=""><div class="map-item-info"><div class="title">' + "Đồ thờ tượng phật" + '</div><div class="address">' + "Quốc lộ 32, Trạm Trôi, Hoài Đức, Hà Nội, Việt Nam" + '</div><div class="description">' + "Khu đô thị Tân Tây Đô,  Hà Nội, VN" + '</div><a href="' + "https://www.google.com/maps/place/C%C3%B4ng+Ty+Tnhh+Sx+Ph%E1%BB%A5+T%C3%B9ng+Xe+M%C3%A1y+M%E1%BA%A1nh+Quang/@20.9861495,105.8354354,14z/data=!4m5!1m2!2m1!1sm%E1%BA%A1nh+quang+kim+giang!3m1!1s0x3135acf1a3d19795:0xec8fe39130743001" + '" class="more-button">' + "Xem thêm" + '</a></div><div class="arrow"></div><div class="close"></div></div></div></div>'
                                                                                                 },
                                                             ],
                                                             options: {
@@ -838,7 +811,7 @@
                             Designed by <a href="index.html" title="Califaxit" target="_blank">Califaxit</a>
                         </div>
                         <div class="paypal">
-                            <img src="image/data/paypal.png" alt="paypal">
+                           <%-- <img src="image/data/paypal.png" alt="paypal">--%>
                         </div>
                     </div>
                 </div>
@@ -959,21 +932,4 @@
         <!--end slider bot-->
     </div>
 </body>
-   <%--  <script src="JS/FRAMEWORK/Include.JS.Base.js"></script>
-    <script src="JS/FRAMEWORK/Include.JS.Framework.js"></script>
-    <script src="JS/FRAMEWORK/Include.JS.Extend.js"></script>  
-     <script type="text/javascript">
-         // khởi tạo ngôn ngữ mặc định
-         Init_System_WEB();
-
-         window.onload = function () {
-
-             Load_MenuTopVer("#verticalmenu");
-             Load_MenuTopHoz("#bs-megamenu");
-             loadsliderTop("#pavo-slideshow");
-             LoadCateGoryLevel2("#ContentCategory");
-             loadsliderBot("#sliderbot");
-
-         };
-          </script>--%>
 </html>
